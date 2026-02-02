@@ -1,0 +1,194 @@
+[
+  {
+    "id": 1,
+    "title": "Huisarts",
+    "author": "Dr. Haegebaert",
+    "category": "Consultatie",
+    "content": "Huisartsbezoek Notitie  \nDatum: 10 januari 2022  \nPatiënt: Jan Janssen, man, 55 jaar oud, 17/03/1966\nReden van bezoek: Routinecontrole diabetes  \n\nSubjectief:\n- Patiënt meldt milde gevoelloosheid in beide voeten, geen huidige zweren of wonden.  \n- Geen nieuwe klachten.  \n\nObjectief:  \n- Vitale functies: Bloeddruk 135/85 mmHg  \n- Laboratoriumwaarden: HbA1c 7,8% (matig onder controle)  \n\nBeoordeling & Plan:  \n1. Type 2 diabetes mellitus – HbA1c is verbeterd maar nog niet optimaal. Belang van glucosemonitoring benadrukt.  \n2. Perifere neuropathie – Milde gevoelloosheid, geen zweren waargenomen. Blijven monitoren.  \n3. Dyslipidemie – Dosering atorvastatine verhoogd van 10 mg naar 20 mg voor betere lipidencontrole.  \n4. Hypertensie – Goed onder controle met lisinopril.  \n\nPlan:  \n- Huidig diabetesbehandelplan voortzetten.\n- Naleving van thuisglucosemonitoring stimuleren.  \n- Opvolging over 6 maanden, tenzij eerder nodig.\n\nDr. Haegebaert",
+    "date": "2022-01-10"
+  },
+  {
+    "id": 2,
+    "title": "Podoloog",
+    "author": "Jaegers, J.",
+    "category": "Consultatie",
+    "content": "Podologie Klinieknotitie  \nDatum: 20 juni 2022  \nPatiënt: Jan Janssen, man, 56 jaar  \nReden van bezoek: Eeltvorming op de rechtervoet  \n\nSubjectief:  \nPatiënt komt op controle bij de podoloog vanwege eelt op de rechtervoet. Ontkent pijn, roodheid of afscheiding. Geen voorgeschiedenis van recente voetulcera of infecties. Geeft aan zich aan de diabetische voetverzorging te houden, maar merkt af en toe droogheid op.  \n\nObjectief:  \n- Inspectie: Geen open wonden, tekenen van infectie of ulceratie. Droge huid waargenomen.  \n- Gevoel: Verminderde vibratie- en monofilamentgevoeligheid aan beide zijden, passend bij perifere neuropathie.  \n- Circulatie: Pedale pulsaties beiderzijds intact.  \n- Musculoskeletaal: Geen misvormingen of structurele afwijkingen.  \n\nBeoordeling:  \n1. Eeltvorming, rechtervoet  \n2. Perifere neuropathie secundair aan diabetes  \n3. Geen huidige ulceratie of infectie  \n\nPlan:  \n- Eelt voorzichtig verwijderd.  \n- Patiënt geïnformeerd over voetverzorging, inclusief geschikt schoeisel en dagelijkse huidinspectie.  \n- Aangeraden regelmatig een hydraterende crème te gebruiken om droogheid en kloven te voorkomen.  \n- Belang van glycemische controle benadrukt voor het beheersen van neuropathie.  \n- Follow-up over 6 maanden of eerder bij nieuwe wonden of symptomen.",
+    "date": "2022-06-20"
+  },
+  {
+    "id": 3,
+    "title": "Huisarts",
+    "author": "Dr. Haegebaert",
+    "category": "Consultatie",
+    "content": "Huisartsbezoek Notitie  \nDatum: 5 oktober 2023 \nPatiënt: Jan Janssen, man, 56 jaar oud  \nReden van bezoek: Opvolging van diabetes en hypertensie  \n\nBeoordeling & bevindingen:  \n- Diabetes: HbA1c 9,1% (verslechterde controle)  \n- Hypertensie: Bloeddruk 138/86 mmHg (suboptimaal maar stabiel)  \n- Diabetische voetzweer: 1 cm niet-genezende wond aan de laterale zijde van de rechtervoet  \n\nPlan:  \n- Topische antibiotische zalf gestart, instructies gegeven voor dagelijkse verbandwissel  \n- Doorverwijzing naar podologie voor verdere evaluatie  \n- Nadruk gelegd op striktere glykemische controle, herhaling van leefstijlaanpassingen en therapietrouw  \n- Opvolgafspraak gepland voor wondcontrole en diabetesbeheer\n\nDr. Haegebaert",
+    "date": "2022-10-03"
+  },
+  {
+    "id": 4,
+    "title": "Vaatchirurgie",
+    "author": "Dr. Broeckx",
+    "category": "Consultatie",
+    "content": "Consultatie Vaatchirurgie  \nDatum: 14 november 2022  \n\nReden voor consultatie:  \nClaudicatiesymptomen – patiënt meldt pijn in de kuit na ongeveer 100 meter wandelen, die verdwijnt bij rust. Fontaine stadium IIa. \n\nBeoordeling & bevindingen:  \n\n- Enkel-arm index (ABI): Rechterzijde 0,7; linkerzijde 0,8.\n- Doppler echografie: Matige stenose van de rechter femorale arterie.\n- Geen tekenen van acute ischemie van het ledemaat.  \n\nPlan:  \n\n- Start met aspirine 81 mg per dag voor secundaire preventie.  \n- Geadviseerd een gestructureerd wandelprogramma te volgen om de claudicatiesymptomen te verbeteren.  \n- Routinecontrole over 1 jaar, of eerder bij verergering van de klachten.\n\nDr. Broeckx",
+    "date": "2022-11-14"
+  },
+  {
+    "id": 5,
+    "title": "Huisarts",
+    "author": "Dr. Haegebaert",
+    "category": "Consultatie",
+    "content": "Huisartsbezoek Notitie  \nDatum: 8 maart 2022  \nPatiënt Jan Janssen, man, 56 jaar  \nReden van bezoek: Routinecontrole diabetes  \n\nSubjectief: Geen nieuwe klachten. Meldt verergering van reflux (GERD), opnieuw gestart met pantoprazol.  \n\nObjectief:  \n- Bloeddruk: 142/88 mmHg  \n- HbA1c: 8,9% (slecht gereguleerd)  \n- Voetonderzoek: Geen ulcera, bilateraal verminderd gevoel  \n\nPlan:  \n- Type 2 diabetes: Insuline glargine verhoogd van 15 → 20 eenheden QHS, nadruk op leefstijlveranderingen.  \n- Hypertensie: Doorgaan met lisinopril 10 mg eenmaal daags, bloeddruk monitoren.  \n- GERD: Pantoprazol 40 mg per dag hervat.  \n- Voetzorg: Geen actieve ulcera, dagelijks controleren geadviseerd.  \n\nOpvolging: HbA1c over 3 maanden, bloeddruk thuis monitoren, eerder contact opnemen bij voetproblemen.\n\nDr. Haegebaert",
+    "date": "2023-03-08"
+  },
+  {
+    "id": 6,
+    "title": "Spoed",
+    "author": "Dr. Aagen",
+    "category": "Klinische nota",
+    "content": "Spoedafdeling Nota  \nDatum: 12 juli 2023  \nPatiëntnaam: Jan Janssen  \nLeeftijd: 57 jaar  \nReden van bezoek: Pijn op de borst, vermoeden van acuut coronair syndroom (ACS)  \n\n Beoordeling & Bevindingen:  \n\n- ECG: Geen tekenen van acute ischemie  \n- Troponines: Negatief x2  \n- Bloeddruk: 150/95 mmHg  \n- Pijnkenmerken: Niet uitstralend, reproduceerbaar bij palpatie  \n- Diagnose: Musculoskeletale thoracale pijn  \n\n Behandeling & Ontslag:  \n\n- Ibuprofen toegediend voor symptomatische verlichting  \n- Geen aanwijzingen voor een cardiale oorzaak; patiënt met geruststelling ontslagen naar huis  \n- Geadviseerd om de bloeddruk op te volgen bij de huisarts\n\nMet collegiale groeten,\nDr. Aagen, UZA Spoed",
+    "date": "2023-07-12"
+  },
+  {
+    "id": 7,
+    "title": "Huisarts",
+    "author": "Dr. Haegebaert",
+    "category": "Consultatie",
+    "content": "Huisartsbezoek Notitie  \nDatum: 5 oktober 2023  \nPatiënt Jan Janssen, man, 57 jaar  \nReden van bezoek: Opvolging van diabetes en hypertensie  \n\nBevindingen en beoordeling:  \n- Diabetes: HbA1c 9,1% (verslechterde controle)  \n- Hypertensie: Bloeddruk 138/86 mmHg (suboptimaal maar stabiel)  \n- Diabetische voetzweer: 1 cm niet-genezende wond aan de laterale zijde van de rechtervoet  \n\nPlan:  \n- Behandeling gestart met topische antibiotische zalf, instructies gegeven voor dagelijkse verbandwissel  \n- Verwijzing naar podologie voor verdere evaluatie  \n- Nadruk gelegd op striktere glycemische controle, herhaling van leefstijlmaatregelen en therapietrouw  \n- Opvolgafspraak gepland voor wondcontrole en diabetesbeheer\n\nDr. Haegebaert",
+    "date": "2023-10-05"
+  },
+  {
+    "id": 8,
+    "title": "Podoloog",
+    "author": "Jaegers, J.",
+    "category": "Consultatie",
+    "content": "Podologiebezoek  \n2 november 2023  \n\nHoofdzorgvraag: Opvolging van wond aan de rechtervoet  \n\nBeoordeling:  \n- Chronische diabetische voetulcus, rechtervoet  \n- Wondgrootte toegenomen tot 1,5 cm, geen drainage waargenomen  \n- Geen tekenen van infectie op dit moment  \n\nInterventies:  \n- Offloading-boot gestart om de druk op het aangedane gebied te verminderen  \n- Doorverwezen naar wondzorg voor verdere behandeling  \n\nPlan:  \n- Wekelijkse verbandwissels  \n- Nauwe opvolging op tekenen van infectie  \n- Opvolgafspraak in de wondzorgkliniek\n\nMet vriendelijke groeten,\nJaegers, J.",
+    "date": "2023-11-02"
+  },
+  {
+    "id": 9,
+    "title": "Huisarts",
+    "author": "Dr. Haegebaert",
+    "category": "Consultatie",
+    "content": "Huisartsbezoek Notitie  \nDatum: 18 februari 2024  \nPatiënt Jan Janssen, man, 57 jaar  \nReden van bezoek: Verergerende ulcus aan de rechtervoet  \n\n Subjectief:  \nPatiënt presenteert zich met een chronische diabetische voetulcus aan de rechtervoet en meldt aanhoudende wondgenezingproblemen. Geen systemische infectiesymptomen (koorts, rillingen) waargenomen.  \n\n Objectief:  \n- Ulcus rechtervoet: 3 cm, milde erytheem, geen purulente afscheiding.  \n- Wonduitstrijkje: Afgenomen voor kweek en gevoeligheid.  \n\n Beoordeling & Plan:  \n1. Diabetische voetulcus – Chronisch, niet-genezend.  \n   - Empirische amoxicilline-clavulaanzuur gestart als voorzorgsmaatregel.  \n   - Verwijzing naar wondzorg voor verdere evaluatie en behandeling.  \n\n2. Diabetesbeheer – Slechte glykemische controle.  \n   - Herbeoordeling van het huidige diabetesregime aanbevolen.  \n   - Overwegen van verwijzing naar endocrinologie bij onvoldoende verbetering.  \n\nFollow-up over 1-2 weken voor herbeoordeling van de wond.\n\nDr. Haegebaert",
+    "date": "2024-02-18"
+  },
+  {
+    "id": 10,
+    "title": "Spoed",
+    "author": "Dr. Federle",
+    "category": "Opname nota",
+    "content": "Spoedafdeling Notitie  \n28 maart 2024  \n\n Hoofdklacht:  \nVerslechterende infectie aan de rechtervoet  \n\n Huidige ziektegeschiedenis:  \nEen 58-jarige man met een voorgeschiedenis van type 2 diabetes mellitus, perifeer arterieel vaatlijden en chronische nierziekte, presenteert zich met progressieve roodheid, zwelling en etterige afscheiding uit een chronische diabetische voetzweer aan de rechtervoet. De symptomen zijn de afgelopen dagen verergerd, met erytheem dat zich nu uitbreidt tot aan de enkel. Patiënt rapporteert milde pijn, maar ontkent koude rillingen of misselijkheid. Geen eerdere debridementprocedure.  \n\n Vitale functies:  \n- Bloeddruk: 128/82 mmHg  \n- Temperatuur: 38,5°C (koorts)  \n- Hartslag: 92 bpm  \n- Ademhalingsfrequentie: 18/min  \n- SpO₂: 98% in kamerlucht  \n\n Lichamelijk onderzoek:  \n- Rechtervoet: 3 cm grote zweer met etterige afscheiding, omgeven door erytheem dat zich uitbreidt tot de enkel, matige zwelling, warme huid bij aanraking. Geen crepitaties.  \n- Perifere pulsaties: Zwak maar palpabel.  \n- Geen tekenen van systemische sepsis buiten koorts.  \n\n Laboratoriumonderzoek:  \n- Witte bloedcellen (WBC): 13,4 ×10⁹/L (verhoogd)  \n- CRP: Nog niet beschikbaar  \n- eGFR: 45 mL/min/1,73m² (baselinewaarde)  \n\n Beoordeling & Plan:  \n1. Diabetische voetinfectie, verslechterend  \n   - IV ceftriaxon + metronidazol gestart  \n   - Wondkweken afgenomen  \n   - Consulten endocrinologie en infectieziekten aangevraagd  \n   - Chirurgische evaluatie overwegen voor debridement  \n\n2. Type 2 diabetes mellitus, slecht onder controle (HbA1c 9,2%)  \n   - Voortzetting van thuisschema met insuline  \n   - Nauwe monitoring van bloedglucose  \n\n3. Perifeer arterieel vaatlijden  \n   - Evalueren op ischemische component die bijdraagt aan de niet-genezende zweer  \n   - Doorverwijzing naar vaatchirurgie indien geïndiceerd  \n\n4. Chronische nierziekte (Stadium 3)  \n   - Vermijden van nefrotoxische middelen  \n   - Monitoring van nierfunctie bij gebruik van antibiotica  \n\n Beleid:  \nOpname voor IV-antibiotica, wondzorg en verdere evaluatie.",
+    "date": "2024-03-28"
+  },
+  {
+    "id": 11,
+    "title": "Wondkweek",
+    "author": "Dr. Heders",
+    "category": "Microbiologie",
+    "content": "Microbiologieverslag  \n28 maart 2024 – Wonduitstrijkkweek  \n\nMonster: Drainage van ulcus rechtervoet  \nGramkleuring: Gram-positieve kokken in trosjes, gram-negatieve staafjes  \n\nKweekresultaten (Definitief, 30 maart 2024):  \n- *Staphylococcus aureus* (MSSA) – Rijke groei  \n- *Pseudomonas aeruginosa* – Matige groei  \n\nAntibioticagevoeligheid:  \n- MSSA: Gevoelig voor oxacilline, clindamycine, vancomycine  \n- Pseudomonas: Resistent tegen amoxicilline-clavulaanzuur, gevoelig voor piperacilline-tazobactam",
+    "date": "2024-03-28"
+  },
+  {
+    "id": 12,
+    "title": "Algemene Afdeling",
+    "author": "Dr. Eyden",
+    "category": "Klinische nota",
+    "content": "30 maart 2024 – Voortgangsnota Algemene Afdeling  \n\nReden voor Opname: Infectie van diabetische voetulcus  \n\nSubjectief:  \nPatiënt opgenomen voor behandeling van een geïnfecteerde diabetische voetulcus. Meldt aanhoudende drainage uit de wond. Geen nieuwe klachten.  \n\nObjectief:  \n- Vitale Parameters: T 38,9°C, BD 132/78 mmHg, HF 92 bpm, AH 18/min, SpO₂ 98% in kamerlucht  \n- Wondonderzoek: Ulcus aan de rechtervoet (3 cm) met aanhoudende purulente drainage, omringende erytheem en milde zwelling. Geen crepitaties.  \n- Microbiologie: Staphylococcus aureus (MSSA) en Pseudomonas aeruginosa geïdentificeerd in wondkweek. Gevoelig voor piperacilline-tazobactam.\n- Neurologisch: Verminderde sensatie in beide voeten, consistent met bekende perifere neuropathie.  \n- MRI-bevindingen: Geen aanwijzingen voor osteomyelitis.  \n\nBeoordeling & Plan:  \n1. Infectie van diabetische voetulcus – Waarschijnlijk verergerende wekedeleninfectie.  \n   - Debridement uitgevoerd.  \n   - Antibiotica gewijzigd naar piperacilline-tazobactam in overleg met de infectiologie.  \n   - Voortzetten wondzorg met dagelijkse verbandwissels.  \n   - Monitoren op progressie (toename van erytheem, verergerende drainage, systemische infectietekenen).  \n\n2. Monitoring op sepsisrisico – Gezien koorts en aanhoudende infectie.  \n   - Regelmatige controles van vitale parameters en laboratoriumwaarden (CBC, CRP, lactaat).  \n   - Bloedkweken afgenomen, resultaat afwachten.  \n\n3. Glykemische controle – Basale insuline voortzetten en aanpassen indien nodig.  \n\nOpvolging:  \n- Herbeoordeling van de wond binnen 24 uur.  \n- Evalueren van antibioticarespons en overwegen van consultatie infectiologie bij uitblijvend herstel.",
+    "date": "2024-03-30"
+  },
+  {
+    "id": 13,
+    "title": "Intensieve Zorgen",
+    "author": "Dr. Timmermans",
+    "category": "Opname nota",
+    "content": " ICU Opnameverslag  \nDatum: 1 april 2024  \nBehandelend arts: Dr. Timmermans  \n\n Reden voor Opname:  \nSeptische shock secundair aan een geïnfecteerde diabetische voetulcus.  \n\n\n Huidige Ziektegeschiedenis:  \n58-jarige man met een voorgeschiedenis van type 2 diabetes mellitus (slechte glycemische controle), hypertensie, chronische nierziekte (CKD stadium 3) en perifeer arterieel vaatlijden (PAD), presenteert zich met progressieve zwakte, koorts en een veranderd bewustzijn. De laatste week verslechtering van erytheem, purulente drainage en necrotische veranderingen in een voetulcus aan de rechtervoet. Verpleging meldt verminderde orale inname en verwardheid in de afgelopen 24 uur.  \n\n\n Vitale Parameters bij Opname:  \n- Bloeddruk: 85/60 mmHg (MAP ~65 mmHg)  \n- Hartslag: 110 bpm (sinustachycardie)  \n- Temperatuur: 38,7°C (koorts)  \n- Ademhalingsfrequentie: 24/min  \n- SpO₂: 94% in kamerlucht  \n\n\n Belangrijke Laboratoriumwaarden:  \n- Lactaat: 4,8 mmol/L (verhoogd, wijst op slechte perfusie)  \n- Creatinine: 2,1 mg/dL (verslechterende acute nierinsufficiëntie, baseline ~1,6 mg/dL)  \n- BUN: 38 mg/dL  \n- Leukocyten: 18,2 x10⁹/L (leukocytose, waarschijnlijk infectieus)  \n- HbA1c: 9,2% (slechte glycemische controle)  \n- Glucose: 265 mg/dL  \n- CRP: 138 mg/L (verhoogd, past bij ernstige infectie)  \n- Bloedkweken: In afwachting  \n\n\n Beoordeling & Plan:  \n\n1. Septische Shock (Diabetische Voetulcus als Waarschijnlijke Bron)  \n   - IV piperacilline-tazobactam + vancomycine empirisch gestart.  \n   - Bloedkweken afgenomen.  \n   - Intensieve IV vochtresuscitatie gestart.  \n   - Norepinefrine gestart vanwege persisterende hypotensie.  \n   - Seriële lactaatbepalingen gepland.  \n\n2. Diabetische Voetulcus (Chronisch, Geïnfecteerd, Necrotisch Weefsel Aanwezig)  \n   - Onderzoek: 3 cm grote ulcus met omliggend erytheem, stinkende purulente drainage en necrotisch weefsel.  \n   - Chirurgische consultatie aangevraagd voor urgente débridement vs. mogelijke amputatie.  \n   - Voortzetting van wondzorg en evaluatie van de respons op antibiotica.  \n\n3. Acute op chronische Nierinsufficiëntie (Sepsis-Gerelateerd, CKD Stadium 3)  \n   - Waarschijnlijk pre-renaal door hypoperfusie.  \n   - Strikte vochtbalansbewaking.  \n   - Vermijden van nefrotoxische medicatie (metformine gestopt).  \n\n4. Hyperglycemie (Stressrespons & Slechte Basiscontrole)  \n   - Insuline-infusie gestart voor betere glycemische controle.  \n   - Frequente glucosecontroles.  \n\n\n Plan:  \n- IC-bewaking voor hemodynamische stabiliteit.  \n- Voortzetting van vasopressoren, IV vochttoediening en antibiotica.  \n- Afwachten van beoordeling door het chirurgisch team voor definitieve wondbehandeling.  \n- Herhaling van laboratoriumonderzoek over 6 uur, met herbeoordeling van nierfunctie en lactaatklaring.  \n\n\n Conclusie:  \nSeptische shock secundair aan een geïnfecteerde diabetische voetulcus met verslechterende acute nierinsufficiëntie. Vereist agressieve resuscitatie, breedspectrum antibiotica, glycemische controle en chirurgische evaluatie.",
+    "date": "2024-04-01"
+  },
+  {
+    "id": 14,
+    "title": "Hemocultuur",
+    "author": "Dr. Klaassen",
+    "category": "Microbiologie",
+    "content": "Microbiologisch Rapport  \n31 maart 2024 – Hemocultuur  \n\nMonstertype: Perifeer bloed  \nVoorlopig resultaat (31 maart 2024): Positief voor gram-positieve kokken  \nDefinitief resultaat (1 april 2024):  \n*Staphylococcus aureus* (MSSA) – Bloedbaaninfectie\n\nAntibiotica Gevoeligheid:\n- MSSA: Gevoelig voor oxacilline, clindamycine, vancomycine\n",
+    "date": "2024-03-31"
+  },
+  {
+    "id": 15,
+    "title": "Rx Voet",
+    "author": "Dr. Linthout",
+    "category": "Radiologie",
+    "content": "Radiologieverslag  \nDatum: 30 maart 2024  \nOnderzoek: Röntgenfoto Rechtervoet  \nIndicatie: Evaluatie voor osteomyelitis bij een chronische diabetische voetulcus  \n\nBevindingen:  \n\n- Geen aanwijzingen voor botdestructie of periostreactie.  \n- Lichte zwelling van de weke delen waargenomen.  \n- Kleine hoeveelheden gas zichtbaar langs de wondranden.  \n\nConclusie:  \n\n- Geen radiografisch bewijs van osteomyelitis op dit moment.  \n- Aanbevolen wordt om de klinische toestand nauwlettend te volgen en vervolgbeeldvorming te overwegen indien de symptomen aanhouden of verergeren.",
+    "date": "2024-03-30"
+  },
+  {
+    "id": 16,
+    "title": "MRI Voet",
+    "author": "Dr. Vermeulen",
+    "category": "Radiologie",
+    "content": "Radiologieverslag  \nDatum: 1 april 2024  \nOnderzoek: MRI Rechtervoet \nIndicatie: Sepsis-evaluatie bij diabetische voetulcus  \n\nBevindingen:  \n\n- Subcutaan oedeem en necrose rond de ulcus.  \n- Geen duidelijke tekenen van osteomyelitis, maar vroege signaalveranderingen in het beenmerg waargenomen.  \n- Toegenomen contrastopname in aangrenzende weke delen, wat wijst op een aanzienlijke infectie.  \n\nConclusie:  \nErnstige weke delen-infectie met vroege aanwijzingen voor osteomyelitis. Aanbevolen wordt om de patiënt nauwgezet klinisch te monitoren en de bevindingen te correleren met ontstekingsmarkers. Overweeg herhaalde beeldvorming bij verslechtering van de symptomen.",
+    "date": "2024-04-01"
+  },
+  {
+    "id": 17,
+    "title": "Huisarts",
+    "author": "Dr. Haegebaert",
+    "category": "Consultatie",
+    "content": "Huisartsbezoek Notitie  \nDatum: 2 oktober 2011  \nPatiënt: Jan Janssen, man, 45 jaar oud  \nReden van bezoek: Toegenomen dorst, polyurie en vermoeidheid gedurende de afgelopen maanden.  \n\n Voorgeschiedenis van de huidige ziekte:  \nPatiënt meldt aanhoudende polydipsie en polyurie in de afgelopen maanden, vergezeld van wisselende vermoeidheid. Geen recent gewichtsverlies, duizeligheid of visuele stoornissen. Geen bekende familiegeschiedenis van diabetes met vroege aanvang. Patiënt ontkent recente infecties of medicatiewijzigingen.  \n\n Medische voorgeschiedenis:  \n- Geen bekende voorgeschiedenis van diabetes, hypertensie of cardiovasculaire aandoeningen.  \n- Ex-roker (15 pakjaren, gestopt 10 jaar geleden).  \n- Familiegeschiedenis: vader met type 2 diabetes en coronaire hartziekte.  \n\n Lichamelijk onderzoek:  \n- Vitale parameters: Bloeddruk 130/85 mmHg, hartslag 76 bpm, BMI 30.0 (obesitas).  \n- Algemeen: Goed uitziend, geen acute klachten.  \n- Hoofd, oren, ogen, neus en keel (HEENT): Geen tekenen van dehydratie.  \n- Cardiaal: Regelmatig ritme en frequentie, geen souffles.  \n- Pulmonair: Heldere ademgeruisen bilateraal.  \n- Extremiteiten: Geen oedeem, geen tekenen van diabetische neuropathie.  \n\n Laboratoriumresultaten:  \n- HbA1c: 9,0% (diagnostisch voor diabetes)  \n- Nuchtere glucose: 180 mg/dL  \n- Lipidenprofiel: LDL 165 mg/dL, HDL 38 mg/dL, triglyceriden 220 mg/dL  \n- Nierfunctie: eGFR binnen normale grenzen  \n\n Beoordeling en plan:  \n Nieuwe diagnose: Type 2 Diabetes Mellitus (T2DM)  \n- Behandeling: Start met Metformine 500 mg tweemaal daags, met geplande opbouw afhankelijk van tolerantie.  \n- Leefstijladviezen: Aangepast dieet en verhoogde lichamelijke activiteit aanbevolen.  \n- Diabeteseducatie: Besproken hoe bloedglucosewaarden te monitoren en waarschuwingssignalen van hyper- en hypoglykemie te herkennen.  \n\n Dyslipidemie  \n- Behandeling: Start met Atorvastatine 20 mg per dag ter verlaging van LDL.  \n- Leefstijladviezen: Versterkte aanbevelingen voor dieet en lichaamsbeweging.  \n\n Vervolgafspraken:  \n- Hercontrole van HbA1c over 3 maanden om de glycemische controle te evalueren.  \n- Monitoring van nierfunctie en lipidenprofiel.  \n- Advies aan patiënt: Vroegtijdig terugkomen bij verergering van klachten of nieuwe zorgen.  \n\nDr. Haegebaert",
+    "date": "2011-10-02"
+  },
+  {
+    "id": 18,
+    "title": "Huisarts",
+    "author": "Dr. Haegebaert",
+    "category": "Consultatie",
+    "content": "Huisartsbezoek Notitie  \nDatum: 17 mei 2014  \nPatiënt: Jan Janssen, man, 48 jaar oud  \nReden van bezoek: Toegenomen dorst, polyurie en vermoeidheid gedurende de afgelopen maanden.  \n\nHoofdklacht:  \n- Aanhoudende brandend maagzuur en oprispingen, verergerend ’s nachts.  \n\nVoorgeschiedenis van de huidige klacht:  \n- Symptomen al enkele maanden aanwezig.  \n- Verergering na maaltijden en bij liggen.  \n- Geen dysfagie, gewichtsverlies of alarmerende symptomen.  \n\nBeoordeling & Plan:  \n- Klinisch beeld wijst op gastro-oesofageale refluxziekte (GERD).  \n- Behandelingsproef gestart: Pantoprazol 40 mg eenmaal daags.  \n- Levensstijl- en dieetadvies gegeven (vermijden van late maaltijden, cafeïne, alcohol, gekruid voedsel).  \n- Follow-up over 4-6 weken om de respons op de behandeling te beoordelen.\n\nDr. Haegebaert",
+    "date": "2014-05-17"
+  },
+  {
+    "id": 19,
+    "title": "Huisarts",
+    "author": "Dr. Haegebaert",
+    "category": "Consultatie",
+    "content": "Huisartsbezoek Notitie  \nDatum: 12 februari 2015   \nPatiënt: Jan Janssen, man, 48 jaar oud  \nReden van bezoek: Routinecontrole \n\nHoofdklacht:  \nRoutinecontrole. Verhoogde bloeddruk opgemerkt (152/95 mmHg).  \n\nAnamnese:  \n- Bekende dyslipidemie, in behandeling met atorvastatine.  \n- Geen eerdere diagnose van hypertensie.  \n\nLichamelijk onderzoek:  \n- Bloeddruk: 152/95 mmHg  \n- Hartslag: 78/min, regelmatig \n- Geen acute benauwdheid of andere klachten.  \n\nLaboratoriumonderzoek:  \n- eGFR: 85 mL/min/1,73m²  \n- Microalbuminurie: Positief (dipstick)  \n\nBeoordeling & Plan:  \n1. Nieuwe diagnose: Hypertensie  \n   - Start Lisinopril 10 mg per dag.  \n   - Advies om thuis de bloeddruk te monitoren.  \n2. Dyslipidemie - stabiel  \n   - Doorgaan met atorvastatine 20 mg.  \n3. Levensstijlaanpassingen  \n   - Aangeraden om het dieet aan te passen (natriumarm, DASH-dieet).  \n   - Meer lichaamsbeweging.  \n   - Besproken gewichtsbeheer.  \n\nVervolgafspraak:  \nHerbeoordeling over 4 weken om de bloeddrukrespons te evalueren.  \n\nDr. Haegebaert",
+    "date": "2015-02-12"
+  },
+  {
+    "id": 20,
+    "title": "Huisarts",
+    "author": "Dr. Haegebaert",
+    "category": "Consultatie",
+    "content": "Huisartsbezoek Notitie  \nDatum: 6 juni 2018  \nPatiënt: Jan Janssen, man, 52 jaar oud  \nReden van bezoek: Bilaterale kniepijn en stijfheid, erger in de ochtend. \n\n Voorgeschiedenis van de huidige klachten:  \nDe patiënt meldt een geleidelijk verergerende kniepijn en stijfheid, vooral in de ochtend en na langdurige inactiviteit. Geen voorgeschiedenis van recent trauma. Hij ervaart moeite met langdurig lopen en traplopen. De pijn verbetert enigszins met beweging maar neemt toe in de loop van de dag.  \n\n Lichamelijk onderzoek:  \n\n- Algemeen: Goed ogende, zwaarlijvige man, zonder acute benauwdheid.  \n- Musculoskeletaal:  \n  - Crepitaties in beide knieën bij passieve beweging.  \n  - Milde gewrichtszwelling, geen roodheid of warmte.  \n  - Verminderde bewegingsuitslag met milde ongemakken bij buigen en strekken.  \n  - Geen tekenen van ligamentaire instabiliteit.  \n\n Beoordeling & Plan:  \nPrimaire diagnose: Osteoartritis van beide knieën (nieuwe diagnose).  \n\n- Röntgenonderzoek aangevraagd ter bevestiging van degeneratieve veranderingen.  \n- Acetaminophen voorgeschreven voor pijnbestrijding, zo nodig in te nemen.  \n- Advies gegeven over gewichtsverlies om de belasting op de gewrichten te verminderen.  \n- Verwijzing naar fysiotherapie voor versterkende en mobiliteitsoefeningen.  \n- Herbeoordeling over 3 maanden of eerder bij verslechtering van de symptomen.  \n\nDr. Haegebaert",
+    "date": "2018-06-06"
+  },
+  {
+    "id": 21,
+    "title": "Rx Knie",
+    "author": "Dr. Verkauwen",
+    "category": "Radiologie",
+    "content": "Radiologisch Verslag – Knie Röntgenfoto  \nPatiëntnaam: Jan Janssen  \nDatum van onderzoek: 1 juni 2018  \nVerwijzend arts: Dr. Haegebaert  \nOnderzoek: Bilaterale knie-röntgenfoto (AP- en laterale opnames)  \n\n Bevindingen:  \n- Matige gewrichtsspleetversmalling in de mediale compartimenten aan beide zijden.  \n- Subchondrale sclerose en osteofytvorming, meer uitgesproken in de rechterknie.  \n- Geen acute fracturen of dislocaties.  \n- Geen significante gewrichtseffusie.  \n\n Conclusie:  \nBevindingen passen bij matige bilaterale artrose, waarbij de rechterknie meer is aangetast dan de linker. Klinische correlatie aanbevolen voor symptoommanagement.  \n\nRadioloog: Dr. Verkauwen  \nZNA Middelheim Beeldvorming",
+    "date": "2018-06-01"
+  },
+  {
+    "id": 22,
+    "title": "Urologie",
+    "author": "Dr. Augustijns",
+    "category": "Consultatie",
+    "content": "Urologie Consultatie  \nDatum: 09/09/2020  \nPatiëntnaam: Jan Janssen  \nGeboortedatum: 17/03/1966  \nLeeftijd: 54  \n\n Hoofdklacht:  \nMoeilijke start van urineren en nycturie sinds zes maanden.  \n\n Anamnese:  \nDe patiënt meldt een geleidelijke toename van moeite met urineren en een verhoogde frequentie ’s nachts gedurende de afgelopen zes maanden. Geen voorgeschiedenis van hematurie, dysurie of urineweginfecties. Geen significante veranderingen in vochtinname. Ontkent koorts, rillingen of gewichtsverlies.  \n\n Medische voorgeschiedenis:  \n- Type 2 diabetes mellitus  \n- Hypertensie  \n- Dyslipidemie  \n- GERD (gastro-oesofageale refluxziekte)  \n- Artrose  \n\n Medicatie:  \n- Metformine 1000 mg 2x/dag  \n- Lisinopril 10 mg 1x/dag  \n- Atorvastatine 20 mg 1x/dag  \n- Pantoprazol 40 mg 1x/dag  \n- Paracetamol indien nodig  \n\n Lichamelijk onderzoek:  \n- Abdomen: Zacht, niet gevoelig, geen palpabele massa’s  \n- Urogenitaal: Geen suprapubische drukpijn, blaas niet gedistendeerd  \n- Rectaal toucher: Vergrote, gladde, niet-gevoelige prostaat, geen noduli  \n\n Beoordeling & Plan:  \n- Symptomen passen bij Benigne Prostaat Hyperplasie (BPH).  \n- Gestart met Tamsulosine 0,4 mg 1x/dag ter verlichting van de symptomen.  \n- Advies over leefstijlveranderingen, waaronder vochtbeheer en het vermijden van cafeïne/alcohol voor het slapengaan.  \n- Controleafspraak over 6-8 weken om de respons op de medicatie te evalueren en verdere interventie te overwegen.  \n\nZorgverlener: Dr. Augustijns  \nGZA Mortsel Urologie",
+    "date": "2020-09-09"
+  },
+  {
+    "id": 23,
+    "title": "Huisarts",
+    "author": "Dr. Haegebaert",
+    "category": "Consultatie",
+    "content": "Huisartsbezoek  \nDatum: 14 april 2021\nZorgverlener: Dr. Haegebaert  \n\n Hoofdklacht:  \nRoutinecontrole voor type 2 diabetes mellitus.  \n\n Huidige ziektegeschiedenis:  \nEen 56-jarige man met een voorgeschiedenis van type 2 diabetes mellitus, hypertensie en dyslipidemie komt op controle. Recent laboratoriumonderzoek toonde een eGFR van 45 mL/min/1,73m², wat wijst op chronische nierziekte (CKD) stadium 3. Urineonderzoek toonde micro-albuminurie. Geen klachten over urinewegproblemen, oedeem of acute ziekte.  \n\n Beoordeling & Plan:  \n1. Chronische nierziekte (Stadium 3) – Nieuwe diagnose  \n   - Waarschijnlijk secundair aan diabetes en hypertensie.  \n   - Aanwezigheid van micro-albuminurie bevestigt nierschade.  \n   - Lisinopril 10 mg eenmaal daags voortzetten ter bescherming van de nieren.  \n   - Nierfunctie en urine micro-albumine/creatinine-ratio elke 6 maanden controleren.  \n   - Strikte controle van bloedsuiker- en bloeddrukwaarden benadrukken.  \n\n2. Type 2 Diabetes Mellitus – Slechte glycemische controle  \n   - Streefwaarde HbA1c <7%; meest recente waarde: 7.6%.  \n   - Metformine 1000 mg tweemaal daags voortzetten, noodzaak voor aanvullende therapie heroverwegen.  \n   - Stimuleren van dieetaanpassingen en naleving van het diabetesmanagementplan.  \n\n3. Hypertensie – Goed onder controle  \n   - Lisinopril 10 mg eenmaal daags voortzetten.  \n   - Bloeddrukmonitoring thuis en bij vervolgafspraken.  \n\n Patiëntenvoorlichting & Vervolgafspraak:  \n- Voorlichting gegeven over progressie van CKD en het belang van glycemische en bloeddrukcontrole.  \n- Advies om voldoende gehydrateerd te blijven en nefrotoxische medicatie/NSAID’s te vermijden.  \n- Belang van monitoring van micro-albuminurie besproken.  \n- Vervolgafspraak over 3-6 maanden voor herhaling van laboratoriumonderzoek en evaluatie.",
+    "date": "2022-11-14"
+  },
+  {
+    "id": 24,
+    "title": "Wondkweek",
+    "author": "Dr. Geraerts",
+    "category": "Microbiologie",
+    "content": "Microbiologie Rapport\nPatiënt: Jan Janssen\nDatum van staalafname: 18/02/2024\nType specimen: Wondkweek\nResultaten: Geen significante bacteriële groei gedetecteerd. Alleen commensale flora aanwezig.\nInterpretatie: Geen bewijs van pathogene infectie.\n\nOndertekend,\nDr. Geraerts",
+    "date": "2024-02-18"
+  }
+]
