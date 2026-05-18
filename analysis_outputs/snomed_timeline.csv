@@ -1,0 +1,866 @@
+run,date,title,snomed_id,snomed_term,count
+semantic,2022-01-10,Huisarts,1287705005,Consultation for diabetes mellitus (procedure),1
+semantic,2022-01-10,Huisarts,309538000,Numbness of foot (finding),1
+semantic,2022-01-10,Huisarts,425426005,Absence of open wound (situation),1
+semantic,2022-01-10,Huisarts,24184005,Blood pressure above reference range (finding),1
+semantic,2022-01-10,Huisarts,165680008,Hemoglobin A1c between 7 percent to 10 percent indicating borderline diabetic control (finding),1
+semantic,2022-01-10,Huisarts,44054006,Diabetes mellitus type 2 (disorder),1
+semantic,2022-01-10,Huisarts,789588003,Peripheral sensory neuropathy (disorder),1
+semantic,2022-01-10,Huisarts,370992007,Dyslipidemia (disorder),1
+semantic,2022-01-10,Huisarts,1145420004,Product containing precisely atorvastatin (as atorvastatin calcium) 20 milligram/1 each conventional release oral tablet (clinical drug),1
+semantic,2022-01-10,Huisarts,373444002,Atorvastatin (substance),1
+semantic,2022-01-10,Huisarts,1356877007,Stable hypertension (disorder),1
+semantic,2022-01-10,Huisarts,386873009,Lisinopril (substance),1
+semantic,2022-01-10,Huisarts,703040004,Agreeing on diabetes care plan (procedure),1
+semantic,2022-01-10,Huisarts,398773005,Diabetes self-monitoring health education (procedure),1
+semantic,2022-01-10,Huisarts,300042001,Follow-up 6 months (finding),1
+semantic,2022-01-10,Huisarts,846719003,No ulcer of skin (situation),1
+semantic,2022-01-10,Huisarts,8580001,Both feet (body structure),1
+semantic,2022-01-10,Huisarts,1184593002,Vital sign document section (record artifact),1
+semantic,2022-01-10,Huisarts,386344002,Laboratory data interpretation (procedure),1
+semantic,2022-06-20,Podoloog,229811005,Foot callus (disorder),1
+semantic,2022-06-20,Podoloog,229826007,Debridement of callus (procedure),1
+semantic,2022-06-20,Podoloog,22253000,Pain (finding),1
+semantic,2022-06-20,Podoloog,247441003,Erythema (finding),1
+semantic,2022-06-20,Podoloog,307488001,Discharge - substance (substance),1
+semantic,2022-06-20,Podoloog,46742003,Skin ulcer (disorder),1
+semantic,2022-06-20,Podoloog,10443009,Localized infection (disorder),1
+semantic,2022-06-20,Podoloog,52475004,Xeroderma,2
+semantic,2022-06-20,Podoloog,425426005,Absence of open wound (situation),1
+semantic,2022-06-20,Podoloog,263913002,Ulceration (qualifier value),1
+semantic,2022-06-20,Podoloog,299934008,Impaired vibration sensation (finding),1
+semantic,2022-06-20,Podoloog,424736006,Peripheral neuropathy due to diabetes mellitus (disorder),1
+semantic,2022-06-20,Podoloog,792832001,All pulses present in bilateral lower limbs (finding),1
+semantic,2022-06-20,Podoloog,164504000,Orthopedic examination - no abnormality detected (finding),1
+semantic,2022-06-20,Podoloog,846737002,No ulcer of right foot (situation),1
+semantic,2022-06-20,Podoloog,385956002,Foot care education (procedure),1
+semantic,2022-06-20,Podoloog,817000004,Wearing appropriate footwear (finding),1
+semantic,2022-06-20,Podoloog,409980007,Skin self-examination (procedure),1
+semantic,2022-06-20,Podoloog,373380003,Emollient (substance),1
+semantic,2022-06-20,Podoloog,95321009,Fissure in skin (disorder),1
+semantic,2022-06-20,Podoloog,401069007,Blood glucose control education (procedure),1
+semantic,2022-06-20,Podoloog,300042001,Follow-up 6 months (finding),1
+semantic,2022-06-20,Podoloog,713150007,Diabetic foot ulcer prevention (regime/therapy),1
+semantic,2022-06-20,Podoloog,7769000,Structure of right foot (body structure),1
+semantic,2022-10-03,Huisarts,73211009,Diabetes mellitus (disorder),1
+semantic,2022-10-03,Huisarts,165680008,Hemoglobin A1c between 7 percent to 10 percent indicating borderline diabetic control (finding),1
+semantic,2022-10-03,Huisarts,268519009,Diabetic - poor control (finding),1
+semantic,2022-10-03,Huisarts,38341003,Hypertensive disorder,1
+semantic,2022-10-03,Huisarts,24184005,Blood pressure above reference range (finding),1
+semantic,2022-10-03,Huisarts,1356877007,Stable hypertension (disorder),1
+semantic,2022-10-03,Huisarts,280137006,Diabetic foot (disorder),1
+semantic,2022-10-03,Huisarts,10958561000119105,Open wound of right foot (disorder),1
+semantic,2022-10-03,Huisarts,182307001,Structure of lateral side of foot (body structure),1
+semantic,2022-10-03,Huisarts,7769000,Structure of right foot (body structure),1
+semantic,2022-10-03,Huisarts,1386244006,Local application of antibiotic (procedure),1
+semantic,2022-10-03,Huisarts,18949003,Change of dressing (procedure),1
+semantic,2022-10-03,Huisarts,306160005,Referral to podiatry service (procedure),1
+semantic,2022-10-03,Huisarts,401069007,Blood glucose control education (procedure),1
+semantic,2022-10-03,Huisarts,223488008,Discussion about changes in lifestyle (procedure),1
+semantic,2022-10-03,Huisarts,418633004,Medication compliance (observable entity),1
+semantic,2022-10-03,Huisarts,185389009,Follow-up visit (procedure),1
+semantic,2022-10-03,Huisarts,225395003,Wound assessment (procedure),1
+semantic,2022-10-03,Huisarts,385806006,Diabetic care management (procedure),1
+semantic,2022-11-14,Vaatchirurgie,63491006,Intermittent claudication (finding),1
+semantic,2022-11-14,Vaatchirurgie,300954003,Pain in calf (finding),1
+semantic,2022-11-14,Vaatchirurgie,244015008,Entire calf of leg (body structure),1
+semantic,2022-11-14,Vaatchirurgie,840580004,Peripheral arterial disease (disorder),1
+semantic,2022-11-14,Vaatchirurgie,446841001,Ankle brachial pressure index (observable entity),3
+semantic,2022-11-14,Vaatchirurgie,1187106001,Doppler ultrasonography (procedure),1
+semantic,2022-11-14,Vaatchirurgie,16011431000119103,Stenosis of artery of right lower limb (disorder),1
+semantic,2022-11-14,Vaatchirurgie,302374009,Entire right femoral artery (body structure),1
+semantic,2022-11-14,Vaatchirurgie,1230182004,Acute lower limb ischemia (disorder),1
+semantic,2022-11-14,Vaatchirurgie,66019005,Limb structure (body structure),1
+semantic,2022-11-14,Vaatchirurgie,717854002,Aspirin therapy (procedure),1
+semantic,2022-11-14,Vaatchirurgie,308931006,Walking practice (regime/therapy),1
+semantic,2022-11-14,Vaatchirurgie,183627004,Follow-up 1 year (finding),1
+semantic,2023-03-08,Huisarts,170742000,Diabetic monitoring (regime/therapy),1
+semantic,2023-03-08,Huisarts,44054006,Diabetes mellitus type 2 (disorder),1
+semantic,2023-03-08,Huisarts,235595009,Gastroesophageal reflux disease (disorder),2
+semantic,2023-03-08,Huisarts,395821003,Pantoprazole (substance),1
+semantic,2023-03-08,Huisarts,182837001,Restart of medication (procedure),1
+semantic,2023-03-08,Huisarts,1145538003,Product containing precisely pantoprazole (as pantoprazole sodium) 40 milligram/1 each gastro-resistant oral tablet (clinical drug),1
+semantic,2023-03-08,Huisarts,46973005,Blood pressure taking (procedure),1
+semantic,2023-03-08,Huisarts,38341003,Hypertensive disorder,1
+semantic,2023-03-08,Huisarts,318859000,Product containing precisely lisinopril 10 milligram/1 each conventional release oral tablet (clinical drug),1
+semantic,2023-03-08,Huisarts,165680008,Hemoglobin A1c between 7 percent to 10 percent indicating borderline diabetic control (finding),1
+semantic,2023-03-08,Huisarts,284384005,Examination of foot (procedure),1
+semantic,2023-03-08,Huisarts,1145250005,Impaired tactile sensation of limb (finding),1
+semantic,2023-03-08,Huisarts,703972004,Insulin dose changed (situation),1
+semantic,2023-03-08,Huisarts,313204009,Lifestyle education (procedure),1
+semantic,2023-03-08,Huisarts,135840009,Blood pressure monitoring (regime/therapy),1
+semantic,2023-03-08,Huisarts,413153004,Blood pressure recorded by patient at home (procedure),1
+semantic,2023-03-08,Huisarts,43396009,Hemoglobin A1c measurement (procedure),1
+semantic,2023-03-08,Huisarts,385955003,Foot care (regime/therapy),1
+semantic,2023-03-08,Huisarts,846736006,No ulcer of left foot (situation),1
+semantic,2023-03-08,Huisarts,401191002,Diabetic foot examination (regime/therapy),1
+semantic,2023-03-08,Huisarts,248264000,No complaints (finding),1
+semantic,2023-03-08,Huisarts,299478007,Foot problem (finding),1
+semantic,2023-07-12,Spoed,29857009,Chest pain (finding),1
+semantic,2023-07-12,Spoed,394659003,Acute coronary syndrome (disorder),1
+semantic,2023-07-12,Spoed,29303009,Electrocardiographic procedure (procedure),1
+semantic,2023-07-12,Spoed,164862008,Electrocardiogram: no myocardial ischemia (finding),1
+semantic,2023-07-12,Spoed,105000003,Troponin measurement (procedure),1
+semantic,2023-07-12,Spoed,371622005,Elevated blood pressure reading without diagnosis of hypertension (situation),1
+semantic,2023-07-12,Spoed,97001000119106,Localized chest pain (finding),2
+semantic,2023-07-12,Spoed,118242002,Finding by palpation (finding),1
+semantic,2023-07-12,Spoed,281245003,Musculoskeletal chest pain (finding),2
+semantic,2023-07-12,Spoed,709541000,Administration of antipyretic (procedure),1
+semantic,2023-07-12,Spoed,162984005,Cardiovascular system examined - no abnormality detected (finding),1
+semantic,2023-07-12,Spoed,397669002,Age (qualifier value),1
+semantic,2023-07-12,Spoed,135840009,Blood pressure monitoring (regime/therapy),1
+semantic,2023-07-12,Spoed,113011001,Palpation (procedure),1
+semantic,2023-10-05,Huisarts,73211009,Diabetes mellitus (disorder),1
+semantic,2023-10-05,Huisarts,38341003,Hypertensive disorder,1
+semantic,2023-10-05,Huisarts,165680008,Hemoglobin A1c between 7 percent to 10 percent indicating borderline diabetic control (finding),1
+semantic,2023-10-05,Huisarts,237622006,Poor glycemic control (disorder),1
+semantic,2023-10-05,Huisarts,24184005,Blood pressure above reference range (finding),1
+semantic,2023-10-05,Huisarts,401117004,Moderate hypertension control (finding),1
+semantic,2023-10-05,Huisarts,280137006,Diabetic foot (disorder),1
+semantic,2023-10-05,Huisarts,125192008,"Wound, non-healed (morphologic abnormality)",1
+semantic,2023-10-05,Huisarts,182307001,Structure of lateral side of foot (body structure),1
+semantic,2023-10-05,Huisarts,385101003,Ointment (basic dose form),1
+semantic,2023-10-05,Huisarts,385949008,Dressing change management (procedure),1
+semantic,2023-10-05,Huisarts,306160005,Referral to podiatry service (procedure),1
+semantic,2023-10-05,Huisarts,386326005,Hyperglycemia management (procedure),1
+semantic,2023-10-05,Huisarts,313204009,Lifestyle education (procedure),1
+semantic,2023-10-05,Huisarts,418633004,Medication compliance (observable entity),1
+semantic,2023-10-05,Huisarts,225395003,Wound assessment (procedure),1
+semantic,2023-10-05,Huisarts,385806006,Diabetic care management (procedure),1
+semantic,2023-11-02,Podoloog,400982009,Chiropody follow-up (finding),1
+semantic,2023-11-02,Podoloog,860979002,Chronic ulcer of right foot due to diabetes mellitus (disorder),1
+semantic,2023-11-02,Podoloog,7769000,Structure of right foot (body structure),1
+semantic,2023-11-02,Podoloog,401239006,Width of wound (observable entity),1
+semantic,2023-11-02,Podoloog,397680002,Absence of signs and symptoms of infection (situation),1
+semantic,2023-11-02,Podoloog,736081002,Referral for complex wound care (procedure),1
+semantic,2023-11-02,Podoloog,410379003,Dressing change/wound care surveillance (regime/therapy),1
+semantic,2023-11-02,Podoloog,370835007,Monitoring for signs and symptoms of infection (regime/therapy),1
+semantic,2023-11-02,Podoloog,185389009,Follow-up visit (procedure),1
+semantic,2024-02-18,Huisarts,860979002,Chronic ulcer of right foot due to diabetes mellitus (disorder),3
+semantic,2024-02-18,Huisarts,789507005,Delayed healing of wound (finding),1
+semantic,2024-02-18,Huisarts,397680002,Absence of signs and symptoms of infection (situation),1
+semantic,2024-02-18,Huisarts,386661006,Fever (finding),1
+semantic,2024-02-18,Huisarts,248456009,Shivering or rigors (finding),1
+semantic,2024-02-18,Huisarts,860977000,Ulcer of right foot due to diabetes mellitus (disorder),1
+semantic,2024-02-18,Huisarts,396361002,"Lesion size, largest dimension (observable entity)",1
+semantic,2024-02-18,Huisarts,247441003,Erythema (finding),1
+semantic,2024-02-18,Huisarts,307229009,Non-purulent discharge from wound (finding),1
+semantic,2024-02-18,Huisarts,258531008,Wound swab (specimen),1
+semantic,2024-02-18,Huisarts,413625003,Bacterial culture and sensitivity (procedure),1
+semantic,2024-02-18,Huisarts,252390002,Culture and susceptibility (procedure),1
+semantic,2024-02-18,Huisarts,92161000112103,Chronic wound (disorder),1
+semantic,2024-02-18,Huisarts,1338032009,Amoxicillin and clavulanic acid therapy (procedure),1
+semantic,2024-02-18,Huisarts,734844004,Product containing amoxicillin and clavulanic acid (medicinal product),1
+semantic,2024-02-18,Huisarts,736081002,Referral for complex wound care (procedure),1
+semantic,2024-02-18,Huisarts,268519009,Diabetic - poor control (finding),1
+semantic,2024-02-18,Huisarts,237622006,Poor glycemic control (disorder),1
+semantic,2024-02-18,Huisarts,394725008,Diabetes medication review (procedure),1
+semantic,2024-02-18,Huisarts,306118006,Referral to endocrinology service (procedure),1
+semantic,2024-02-18,Huisarts,372032001,Evaluation of wound healing progress (procedure),2
+semantic,2024-02-18,Huisarts,183621003,Follow-up 2 weeks (finding),1
+semantic,2024-02-18,Huisarts,7769000,Structure of right foot (body structure),1
+semantic,2024-02-18,Huisarts,385942004,Wound care management (procedure),1
+semantic,2024-02-18,Huisarts,416462003,Wound (disorder),1
+semantic,2024-03-28,Spoed,299990002,Infection of foot (disorder),1
+semantic,2024-03-28,Spoed,860979002,Chronic ulcer of right foot due to diabetes mellitus (disorder),1
+semantic,2024-03-28,Spoed,7769000,Structure of right foot (body structure),1
+semantic,2024-03-28,Spoed,6685009,Structure of right ankle,1
+semantic,2024-03-28,Spoed,225550006,Purulent discharge from wound (finding),1
+semantic,2024-03-28,Spoed,247441003,Erythema (finding),1
+semantic,2024-03-28,Spoed,297142003,Foot swelling (finding),1
+semantic,2024-03-28,Spoed,822960006,Temperature of skin over lesion warm (finding),1
+semantic,2024-03-28,Spoed,64205004,Subcutaneous crepitus (finding),1
+semantic,2024-03-28,Spoed,315225007,Weak arterial pulse (finding),1
+semantic,2024-03-28,Spoed,40196000,Mild pain (finding),1
+semantic,2024-03-28,Spoed,43724002,Chill (finding),1
+semantic,2024-03-28,Spoed,422587007,Nausea (finding),1
+semantic,2024-03-28,Spoed,426000000,Fever greater than 100.4 Fahrenheit (finding),1
+semantic,2024-03-28,Spoed,723232008,Average blood pressure (observable entity),1
+semantic,2024-03-28,Spoed,364075005,Heart rate (observable entity),1
+semantic,2024-03-28,Spoed,20716004,Respiratory rate normal (finding),1
+semantic,2024-03-28,Spoed,448225001,Oxygen saturation within reference range (finding),1
+semantic,2024-03-28,Spoed,414478003,Blood leukocyte number above reference range (finding),1
+semantic,2024-03-28,Spoed,863929001,Glomerular filtration rate below reference range (finding),1
+semantic,2024-03-28,Spoed,165680008,Hemoglobin A1c between 7 percent to 10 percent indicating borderline diabetic control (finding),1
+semantic,2024-03-28,Spoed,443694000,Uncontrolled type 2 diabetes mellitus (disorder),1
+semantic,2024-03-28,Spoed,840580004,Peripheral arterial disease (disorder),1
+semantic,2024-03-28,Spoed,433144002,Chronic kidney disease stage 3 (disorder),1
+semantic,2024-03-28,Spoed,200687002,Cellulitis of foot due to diabetes mellitus (disorder),1
+semantic,2024-03-28,Spoed,1340183007,Ceftriaxone therapy (procedure),1
+semantic,2024-03-28,Spoed,372670001,Ceftriaxone (substance),1
+semantic,2024-03-28,Spoed,372602008,Metronidazole (substance),1
+semantic,2024-03-28,Spoed,258531008,Wound swab (specimen),1
+semantic,2024-03-28,Spoed,306284005,Referral to infectious diseases physician (procedure),1
+semantic,2024-03-28,Spoed,225148005,Surgical debridement of wound (procedure),1
+semantic,2024-03-28,Spoed,36777000,Debridement (procedure),1
+semantic,2024-03-28,Spoed,225302006,Insulin regime (regime/therapy),1
+semantic,2024-03-28,Spoed,67866001,Insulin (substance),1
+semantic,2024-03-28,Spoed,713130008,Assessment of diabetic foot ulcer (procedure),1
+semantic,2024-03-28,Spoed,306934005,Referral to vascular surgery service (procedure),1
+semantic,2024-03-28,Spoed,182809008,Renal function monitoring (regime/therapy),1
+semantic,2024-03-28,Spoed,304566005,Admission for treatment (procedure),1
+semantic,2024-03-28,Spoed,225358003,Wound care (regime/therapy),1
+semantic,2024-03-28,Spoed,281790008,Intravenous antibiotic therapy (procedure),1
+semantic,2024-03-28,Wondkweek,4341000179107,Microbiology report (record artifact),1
+semantic,2024-03-28,Wondkweek,258531008,Wound swab (specimen),1
+semantic,2024-03-28,Wondkweek,830072004,Ulcer of right foot (disorder),1
+semantic,2024-03-28,Wondkweek,7769000,Structure of right foot (body structure),1
+semantic,2024-03-28,Wondkweek,391245000,Gram stain microscopy (procedure),1
+semantic,2024-03-28,Wondkweek,70003006,Gram-positive cocci in clusters (finding),1
+semantic,2024-03-28,Wondkweek,87172008,Gram-negative bacillus (organism),1
+semantic,2024-03-28,Wondkweek,417943000,Methicillin susceptible Staphylococcus aureus (organism),2
+semantic,2024-03-28,Wondkweek,52499004,Pseudomonas aeruginosa (organism),1
+semantic,2024-03-28,Wondkweek,263776006,Heavy growth (qualifier value),1
+semantic,2024-03-28,Wondkweek,263812008,Moderate growth (qualifier value),1
+semantic,2024-03-28,Wondkweek,14788002,Antimicrobial susceptibility test (procedure),1
+semantic,2024-03-28,Wondkweek,698216001,Vancomycin susceptible Staphylococcus aureus (organism),1
+semantic,2024-03-28,Wondkweek,372868007,Oxacillin (substance),1
+semantic,2024-03-28,Wondkweek,372786004,Clindamycin (substance),1
+semantic,2024-03-28,Wondkweek,372735009,Vancomycin (substance),1
+semantic,2024-03-28,Wondkweek,774587000,Product containing only amoxicillin and clavulanic acid (medicinal product),1
+semantic,2024-03-28,Wondkweek,346628003,Product containing piperacillin and tazobactam (medicinal product),1
+semantic,2024-03-30,Algemene Afdeling,419100001,Infection of foot due to diabetes mellitus (disorder),2
+semantic,2024-03-30,Algemene Afdeling,201252003,Mixed diabetic ulcer - foot (disorder),1
+semantic,2024-03-30,Algemene Afdeling,7769000,Structure of right foot (body structure),1
+semantic,2024-03-30,Algemene Afdeling,26514007,Draining wound (morphologic abnormality),1
+semantic,2024-03-30,Algemene Afdeling,225550006,Purulent discharge from wound (finding),2
+semantic,2024-03-30,Algemene Afdeling,449738003,Inflammation of periwound skin (finding),1
+semantic,2024-03-30,Algemene Afdeling,298349001,Soft tissue swelling (finding),1
+semantic,2024-03-30,Algemene Afdeling,426000000,Fever greater than 100.4 Fahrenheit (finding),1
+semantic,2024-03-30,Algemene Afdeling,371622005,Elevated blood pressure reading without diagnosis of hypertension (situation),1
+semantic,2024-03-30,Algemene Afdeling,364075005,Heart rate (observable entity),1
+semantic,2024-03-30,Algemene Afdeling,86290005,Respiratory rate (observable entity),1
+semantic,2024-03-30,Algemene Afdeling,448225001,Oxygen saturation within reference range (finding),1
+semantic,2024-03-30,Algemene Afdeling,309538000,Numbness of foot (finding),1
+semantic,2024-03-30,Algemene Afdeling,424736006,Peripheral neuropathy due to diabetes mellitus (disorder),1
+semantic,2024-03-30,Algemene Afdeling,417943000,Methicillin susceptible Staphylococcus aureus (organism),1
+semantic,2024-03-30,Algemene Afdeling,52499004,Pseudomonas aeruginosa (organism),1
+semantic,2024-03-30,Algemene Afdeling,401294003,"Wound microscopy, culture and sensitivities (procedure)",1
+semantic,2024-03-30,Algemene Afdeling,346628003,Product containing piperacillin and tazobactam (medicinal product),1
+semantic,2024-03-30,Algemene Afdeling,312775003,Debridement of ulcer (procedure),1
+semantic,2024-03-30,Algemene Afdeling,410379003,Dressing change/wound care surveillance (regime/therapy),1
+semantic,2024-03-30,Algemene Afdeling,247441003,Erythema (finding),1
+semantic,2024-03-30,Algemene Afdeling,370835007,Monitoring for signs and symptoms of infection (regime/therapy),1
+semantic,2024-03-30,Algemene Afdeling,386661006,Fever (finding),1
+semantic,2024-03-30,Algemene Afdeling,182777000,Monitoring of patient (regime/therapy),1
+semantic,2024-03-30,Algemene Afdeling,26604007,Complete blood count (procedure),1
+semantic,2024-03-30,Algemene Afdeling,55235003,C-reactive protein measurement (procedure),1
+semantic,2024-03-30,Algemene Afdeling,372461000119109,Lactate in blood (observable entity),1
+semantic,2024-03-30,Algemene Afdeling,30088009,Blood culture (procedure),1
+semantic,2024-03-30,Algemene Afdeling,418389000,Blood sugar management (procedure),1
+semantic,2024-03-30,Algemene Afdeling,870499003,Basal insulin infusion rate,1
+semantic,2024-03-30,Algemene Afdeling,225395003,Wound assessment (procedure),1
+semantic,2024-03-30,Algemene Afdeling,306284005,Referral to infectious diseases physician (procedure),1
+semantic,2024-04-01,Intensieve Zorgen,76571007,Septic shock (disorder),1
+semantic,2024-04-01,Intensieve Zorgen,419100001,Infection of foot due to diabetes mellitus (disorder),1
+semantic,2024-04-01,Intensieve Zorgen,44054006,Diabetes mellitus type 2 (disorder),1
+semantic,2024-04-01,Intensieve Zorgen,237622006,Poor glycemic control (disorder),1
+semantic,2024-04-01,Intensieve Zorgen,38341003,Hypertensive disorder,1
+semantic,2024-04-01,Intensieve Zorgen,433144002,Chronic kidney disease stage 3 (disorder),1
+semantic,2024-04-01,Intensieve Zorgen,840580004,Peripheral arterial disease (disorder),1
+semantic,2024-04-01,Intensieve Zorgen,1137511009,Progressive weakness of muscle (finding),1
+semantic,2024-04-01,Intensieve Zorgen,386661006,Fever (finding),1
+semantic,2024-04-01,Intensieve Zorgen,419284004,Altered mental status (finding),1
+semantic,2024-04-01,Intensieve Zorgen,247441003,Erythema (finding),2
+semantic,2024-04-01,Intensieve Zorgen,225550006,Purulent discharge from wound (finding),2
+semantic,2024-04-01,Intensieve Zorgen,1366725006,Tissue necrosis (disorder),1
+semantic,2024-04-01,Intensieve Zorgen,10636431000119100,Chronic ulcer of right foot (disorder),1
+semantic,2024-04-01,Intensieve Zorgen,440321000124101,Inadequate oral intake (finding),1
+semantic,2024-04-01,Intensieve Zorgen,286933003,Confusional state (disorder),1
+semantic,2024-04-01,Intensieve Zorgen,12763006,Blood pressure below reference range (finding),1
+semantic,2024-04-01,Intensieve Zorgen,11092001,Sinus tachycardia (finding),1
+semantic,2024-04-01,Intensieve Zorgen,50177009,Body temperature above reference range (finding),1
+semantic,2024-04-01,Intensieve Zorgen,86290005,Respiratory rate (observable entity),1
+semantic,2024-04-01,Intensieve Zorgen,449171008,Oxygen saturation below reference range (finding),1
+semantic,2024-04-01,Intensieve Zorgen,372461000119109,Lactate in blood (observable entity),1
+semantic,2024-04-01,Intensieve Zorgen,166717003,Serum creatinine above reference range (finding),1
+semantic,2024-04-01,Intensieve Zorgen,722278006,Acute kidney injury due to sepsis (disorder),1
+semantic,2024-04-01,Intensieve Zorgen,1179462007,Blood urea above reference range (finding),1
+semantic,2024-04-01,Intensieve Zorgen,414478003,Blood leukocyte number above reference range (finding),1
+semantic,2024-04-01,Intensieve Zorgen,111583006,Leukocytosis (disorder),1
+semantic,2024-04-01,Intensieve Zorgen,165680008,Hemoglobin A1c between 7 percent to 10 percent indicating borderline diabetic control (finding),1
+semantic,2024-04-01,Intensieve Zorgen,444780001,Glucose in blood specimen above reference range (finding),1
+semantic,2024-04-01,Intensieve Zorgen,119971000119104,C-reactive protein above reference range (finding),1
+semantic,2024-04-01,Intensieve Zorgen,446131002,Blood specimen obtained for blood culture (specimen),1
+semantic,2024-04-01,Intensieve Zorgen,777212006,Product containing only piperacillin and tazobactam (medicinal product),1
+semantic,2024-04-01,Intensieve Zorgen,1335910004,Vancomycin therapy (procedure),1
+semantic,2024-04-01,Intensieve Zorgen,30088009,Blood culture (procedure),1
+semantic,2024-04-01,Intensieve Zorgen,430701006,Resuscitation using intravenous fluid (procedure),1
+semantic,2024-04-01,Intensieve Zorgen,50060161000188105,Administration of norepinephrine (procedure),1
+semantic,2024-04-01,Intensieve Zorgen,7431000175109,Refractory hypotension,1
+semantic,2024-04-01,Intensieve Zorgen,270982000,Serum lactate measurement (procedure),1
+semantic,2024-04-01,Intensieve Zorgen,201250006,Ischemic ulcer of foot due to diabetes mellitus (disorder),1
+semantic,2024-04-01,Intensieve Zorgen,441390007,Surface area of ulcer (observable entity),1
+semantic,2024-04-01,Intensieve Zorgen,44015005,Necrotic debris (morphologic abnormality),1
+semantic,2024-04-01,Intensieve Zorgen,225148005,Surgical debridement of wound (procedure),2
+semantic,2024-04-01,Intensieve Zorgen,306180006,Referral to surgical service (procedure),1
+semantic,2024-04-01,Intensieve Zorgen,81723002,Amputation (procedure),1
+semantic,2024-04-01,Intensieve Zorgen,225358003,Wound care (regime/therapy),1
+semantic,2024-04-01,Intensieve Zorgen,236433006,Acute-on-chronic renal failure (disorder),1
+semantic,2024-04-01,Intensieve Zorgen,445646001,Prerenal azotemia (disorder),1
+semantic,2024-04-01,Intensieve Zorgen,368051000119109,Hyperglycemia due to type 2 diabetes mellitus (disorder),1
+semantic,2024-04-01,Intensieve Zorgen,39543009,Administration of insulin (procedure),1
+semantic,2024-04-01,Intensieve Zorgen,865984006,Frequency of blood glucose self-monitoring (observable entity),1
+semantic,2024-04-01,Intensieve Zorgen,716777001,Hemodynamic monitoring (regime/therapy),1
+semantic,2024-04-01,Intensieve Zorgen,266714009,Previous treatment continue (situation),1
+semantic,2024-04-01,Intensieve Zorgen,870406003,Vasopressor (substance),1
+semantic,2024-04-01,Intensieve Zorgen,103744005,Administration of intravenous fluids (procedure),1
+semantic,2024-04-01,Intensieve Zorgen,281789004,Antibiotic therapy (procedure),1
+semantic,2024-04-01,Intensieve Zorgen,439569004,Resuscitation (procedure),1
+semantic,2024-03-31,Hemocultuur,30088009,Blood culture (procedure),1
+semantic,2024-03-31,Hemocultuur,122551003,Peripheral blood specimen (specimen),1
+semantic,2024-03-31,Hemocultuur,59206002,Gram-positive coccus (organism),1
+semantic,2024-03-31,Hemocultuur,3092008,Staphylococcus aureus (organism),1
+semantic,2024-03-31,Hemocultuur,417943000,Methicillin susceptible Staphylococcus aureus (organism),1
+semantic,2024-03-31,Hemocultuur,1371405006,Bacteremia caused by Staphylococcus (finding),1
+semantic,2024-03-31,Hemocultuur,14788002,Antimicrobial susceptibility test (procedure),1
+semantic,2024-03-31,Hemocultuur,698216001,Vancomycin susceptible Staphylococcus aureus (organism),1
+semantic,2024-03-31,Hemocultuur,372868007,Oxacillin (substance),1
+semantic,2024-03-31,Hemocultuur,372786004,Clindamycin (substance),1
+semantic,2024-03-31,Hemocultuur,372735009,Vancomycin (substance),1
+semantic,2024-03-30,Rx Voet,426311001,Plain X-ray of right foot (procedure),1
+semantic,2024-03-30,Rx Voet,7769000,Structure of right foot (body structure),1
+semantic,2024-03-30,Rx Voet,713130008,Assessment of diabetic foot ulcer (procedure),1
+semantic,2024-03-30,Rx Voet,60168000,Osteomyelitis (disorder),1
+semantic,2024-03-30,Rx Voet,201252003,Mixed diabetic ulcer - foot (disorder),1
+semantic,2024-03-30,Rx Voet,860716008,No abnormality of bone (situation),1
+semantic,2024-03-30,Rx Voet,203522001,Osteolysis (disorder),1
+semantic,2024-03-30,Rx Voet,30397001,"Periosteal bone formation, function (observable entity)",1
+semantic,2024-03-30,Rx Voet,298349001,Soft tissue swelling (finding),1
+semantic,2024-03-30,Rx Voet,87784001,Structure of soft tissue (body structure),1
+semantic,2024-03-30,Rx Voet,44217009,Gaseous edema (morphologic abnormality),1
+semantic,2024-03-30,Rx Voet,763286004,Wound edge observable (observable entity),1
+semantic,2024-03-30,Rx Voet,162408000,General symptom description (finding),1
+semantic,2024-04-01,MRI Voet,2301000087101,Magnetic resonance imaging of right foot with contrast (procedure),1
+semantic,2024-04-01,MRI Voet,870441004,Screening for sepsis (procedure),1
+semantic,2024-04-01,MRI Voet,713130008,Assessment of diabetic foot ulcer (procedure),1
+semantic,2024-04-01,MRI Voet,371087003,Ulcer of foot due to diabetes mellitus (disorder),1
+semantic,2024-04-01,MRI Voet,40829002,Acute edema (morphologic abnormality),1
+semantic,2024-04-01,MRI Voet,239157004,Wound edge necrosis (finding),1
+semantic,2024-04-01,MRI Voet,429040005,Ulcer (disorder),1
+semantic,2024-04-01,MRI Voet,860716008,No abnormality of bone (situation),1
+semantic,2024-04-01,MRI Voet,60168000,Osteomyelitis (disorder),2
+semantic,2024-04-01,MRI Voet,250411006,Bone marrow finding (finding),1
+semantic,2024-04-01,MRI Voet,14016003,Bone marrow structure (body structure),1
+semantic,2024-04-01,MRI Voet,87784001,Structure of soft tissue (body structure),1
+semantic,2024-04-01,MRI Voet,10443009,Localized infection (disorder),1
+semantic,2024-04-01,MRI Voet,95880003,Soft tissue infection (disorder),2
+semantic,2024-04-01,MRI Voet,119971000119104,C-reactive protein above reference range (finding),1
+semantic,2024-04-01,MRI Voet,230993007,Worsening (qualifier value),1
+semantic,2024-04-01,MRI Voet,38276004,Multiple symptoms (finding),1
+semantic,2024-04-01,MRI Voet,7769000,Structure of right foot (body structure),1
+semantic,2011-10-02,Huisarts,17173007,Excessive thirst (finding),2
+semantic,2011-10-02,Huisarts,28442001,Polyuria (finding),1
+semantic,2011-10-02,Huisarts,84229001,Fatigue (finding),1
+semantic,2011-10-02,Huisarts,363806002,Weight loss (amount) (observable entity),1
+semantic,2011-10-02,Huisarts,1141711004,No dizziness (situation),1
+semantic,2011-10-02,Huisarts,63102001,Visual disturbance (disorder),1
+semantic,2011-10-02,Huisarts,44054006,Diabetes mellitus type 2 (disorder),3
+semantic,2011-10-02,Huisarts,38341003,Hypertensive disorder,1
+semantic,2011-10-02,Huisarts,128292002,Chronic disease of cardiovascular system (disorder),1
+semantic,2011-10-02,Huisarts,2943051000005103,History of nicotine use (situation),1
+semantic,2011-10-02,Huisarts,53741008,Coronary arteriosclerosis (disorder),1
+semantic,2011-10-02,Huisarts,371622005,Elevated blood pressure reading without diagnosis of hypertension (situation),1
+semantic,2011-10-02,Huisarts,364075005,Heart rate (observable entity),1
+semantic,2011-10-02,Huisarts,162864005,Body mass index 30+ - obesity (finding),1
+semantic,2011-10-02,Huisarts,414916001,Obesity (disorder),1
+semantic,2011-10-02,Huisarts,860981000,No dehydration (situation),1
+semantic,2011-10-02,Huisarts,301114007,Finding of regularity of heart rhythm (finding),1
+semantic,2011-10-02,Huisarts,48348007,Normal breath sounds (finding),1
+semantic,2011-10-02,Huisarts,161980004,No edema present (situation),1
+semantic,2011-10-02,Huisarts,1344906007,No disorder of peripheral nerves due to diabetes mellitus (situation),1
+semantic,2011-10-02,Huisarts,165680008,Hemoglobin A1c between 7 percent to 10 percent indicating borderline diabetic control (finding),1
+semantic,2011-10-02,Huisarts,167096006,Plasma fasting glucose measurement (procedure),1
+semantic,2011-10-02,Huisarts,372361000119104,Low density lipoprotein cholesterol by direct assay (observable entity),1
+semantic,2011-10-02,Huisarts,1172654005,High density lipoprotein below reference range (finding),1
+semantic,2011-10-02,Huisarts,365795001,Finding of triglyceride level (finding),1
+semantic,2011-10-02,Huisarts,1187198009,Glomerular filtration rate within reference range (finding),1
+semantic,2011-10-02,Huisarts,1340186004,Metformin therapy (procedure),1
+semantic,2011-10-02,Huisarts,445341000124100,Modification of nutritional regime (regime/therapy),1
+semantic,2011-10-02,Huisarts,1171000175109,Increased physical activity (finding),1
+semantic,2011-10-02,Huisarts,698610002,Education about self management of diabetes (procedure),1
+semantic,2011-10-02,Huisarts,370992007,Dyslipidemia (disorder),1
+semantic,2011-10-02,Huisarts,1145420004,Product containing precisely atorvastatin (as atorvastatin calcium) 20 milligram/1 each conventional release oral tablet (clinical drug),1
+semantic,2011-10-02,Huisarts,43396009,Hemoglobin A1c measurement (procedure),1
+semantic,2011-10-02,Huisarts,182778005,Metabolic monitoring (regime/therapy),1
+semantic,2011-10-02,Huisarts,11953005,Renal function (observable entity),1
+semantic,2011-10-02,Huisarts,16254007,Lipid panel (procedure),1
+semantic,2014-05-17,Huisarts,249477003,Increased thirst (finding),1
+semantic,2014-05-17,Huisarts,28442001,Polyuria (finding),1
+semantic,2014-05-17,Huisarts,84229001,Fatigue (finding),1
+semantic,2014-05-17,Huisarts,16331000,Heartburn (finding),1
+semantic,2014-05-17,Huisarts,102622004,Regurgitation of food (finding),1
+semantic,2014-05-17,Huisarts,162495007,Symptom occurs at night (finding),1
+semantic,2014-05-17,Huisarts,24863003,Postprandial (qualifier value),1
+semantic,2014-05-17,Huisarts,40739000,Dysphagia (disorder),1
+semantic,2014-05-17,Huisarts,363806002,Weight loss (amount) (observable entity),1
+semantic,2014-05-17,Huisarts,235595009,Gastroesophageal reflux disease (disorder),1
+semantic,2014-05-17,Huisarts,110463001,Therapeutic evaluation (procedure),1
+semantic,2014-05-17,Huisarts,1145538003,Product containing precisely pantoprazole (as pantoprazole sodium) 40 milligram/1 each gastro-resistant oral tablet (clinical drug),1
+semantic,2014-05-17,Huisarts,443288003,Lifestyle education regarding diet (procedure),1
+semantic,2014-05-17,Huisarts,162551004,Irregular meal times (finding),1
+semantic,2014-05-17,Huisarts,255641001,Caffeine (substance),1
+semantic,2014-05-17,Huisarts,53527002,Alcoholic beverage (substance),1
+semantic,2014-05-17,Huisarts,228071009,Spicy food (substance),1
+semantic,2014-05-17,Huisarts,183628009,Follow-up 6 weeks (finding),1
+semantic,2014-05-17,Huisarts,162448008,Symptom lasts months (finding),1
+semantic,2015-02-12,Huisarts,185349003,Encounter for check up (procedure),1
+semantic,2015-02-12,Huisarts,371622005,Elevated blood pressure reading without diagnosis of hypertension (situation),1
+semantic,2015-02-12,Huisarts,24184005,Blood pressure above reference range (finding),2
+semantic,2015-02-12,Huisarts,370992007,Dyslipidemia (disorder),1
+semantic,2015-02-12,Huisarts,1145420004,Product containing precisely atorvastatin (as atorvastatin calcium) 20 milligram/1 each conventional release oral tablet (clinical drug),1
+semantic,2015-02-12,Huisarts,318859000,Product containing precisely lisinopril 10 milligram/1 each conventional release oral tablet (clinical drug),1
+semantic,2015-02-12,Huisarts,413153004,Blood pressure recorded by patient at home (procedure),1
+semantic,2015-02-12,Huisarts,80274001,Glomerular filtration rate (observable entity),1
+semantic,2015-02-12,Huisarts,167582007,Urine microalbumin detected (finding),1
+semantic,2015-02-12,Huisarts,76863003,Normal heart rate (finding),1
+semantic,2015-02-12,Huisarts,267036007,Dyspnea (finding),1
+semantic,2015-02-12,Huisarts,444059002,Hypercholesterolemia well controlled (finding),1
+semantic,2015-02-12,Huisarts,437421000124105,Decreased sodium diet (regime/therapy),1
+semantic,2015-02-12,Huisarts,386619000,Low sodium diet (finding),1
+semantic,2015-02-12,Huisarts,819961005,Physical activity guidance (procedure),1
+semantic,2015-02-12,Huisarts,698471002,Patient advised about weight management (situation),1
+semantic,2015-02-12,Huisarts,385845001,Blood pressure taking assessment (procedure),1
+semantic,2018-06-06,Huisarts,15726841000119108,Arthropathy of bilateral knee joints (disorder),1
+semantic,2018-06-06,Huisarts,249913002,Knee stiff (finding),1
+semantic,2018-06-06,Huisarts,773760007,Traumatic event (event),1
+semantic,2018-06-06,Huisarts,301586005,Difficulty managing steps and stairs (finding),1
+semantic,2018-06-06,Huisarts,414915002,Obese (finding),1
+semantic,2018-06-06,Huisarts,267036007,Dyspnea (finding),1
+semantic,2018-06-06,Huisarts,299378008,Knee joint crepitus (finding),1
+semantic,2018-06-06,Huisarts,271771009,Joint swelling (finding),1
+semantic,2018-06-06,Huisarts,298222004,Active range of joint movement reduced (finding),1
+semantic,2018-06-06,Huisarts,27911000,Laxity of ligament (disorder),1
+semantic,2018-06-06,Huisarts,239873007,Osteoarthritis of knee (disorder),1
+semantic,2018-06-06,Huisarts,1290410009,Plain X-ray of bilateral knee regions (procedure),1
+semantic,2018-06-06,Huisarts,107669003,Degenerative abnormality (morphologic abnormality),1
+semantic,2018-06-06,Huisarts,387517004,Paracetamol (substance),1
+semantic,2018-06-06,Huisarts,306170007,Referral to physiotherapy service (procedure),1
+semantic,2018-06-06,Huisarts,36701003,Both knees (body structure),1
+semantic,2018-06-06,Huisarts,229528003,"Passive movements to the knee joint, function (observable entity)",1
+semantic,2018-06-06,Huisarts,261081002,Flexion/extension (qualifier value),1
+semantic,2018-06-01,Rx Knie,1290413006,"Plain X-ray of knee region, anteroposterior and lateral views (procedure)",2
+semantic,2018-06-01,Rx Knie,1290410009,Plain X-ray of bilateral knee regions (procedure),1
+semantic,2018-06-01,Rx Knie,244552003,Structure of medial compartment of knee (body structure),1
+semantic,2018-06-01,Rx Knie,304913001,Bilateral knee joints (body structure),1
+semantic,2018-06-01,Rx Knie,316681000119105,Osteophyte of right knee (disorder),1
+semantic,2018-06-01,Rx Knie,88998003,Osteophyte (morphologic abnormality),1
+semantic,2018-06-01,Rx Knie,210562007,Entire right knee (body structure),1
+semantic,2018-06-01,Rx Knie,1149217004,No traumatic injury (situation),1
+semantic,2018-06-01,Rx Knie,125605004,Fracture of bone (disorder),1
+semantic,2018-06-01,Rx Knie,87642003,Dislocation (morphologic abnormality),1
+semantic,2018-06-01,Rx Knie,274827003,Joint not swollen (situation),1
+semantic,2018-06-01,Rx Knie,112981000119107,Osteoarthritis of bilateral knee joints (disorder),1
+semantic,2020-09-09,Urologie,5972002,Delay when starting to pass urine (finding),1
+semantic,2020-09-09,Urologie,139394000,Nocturia (finding),1
+semantic,2020-09-09,Urologie,53298000,Hematuria syndrome (disorder),1
+semantic,2020-09-09,Urologie,49650001,Dysuria (finding),1
+semantic,2020-09-09,Urologie,68566005,Urinary tract infectious disease (disorder),1
+semantic,2020-09-09,Urologie,386661006,Fever (finding),1
+semantic,2020-09-09,Urologie,43724002,Chill (finding),1
+semantic,2020-09-09,Urologie,363806002,Weight loss (amount) (observable entity),1
+semantic,2020-09-09,Urologie,44054006,Diabetes mellitus type 2 (disorder),1
+semantic,2020-09-09,Urologie,38341003,Hypertensive disorder (systemic arterial),1
+semantic,2020-09-09,Urologie,370992007,Dyslipidemia (disorder),1
+semantic,2020-09-09,Urologie,235595009,Gastroesophageal reflux disease (disorder),1
+semantic,2020-09-09,Urologie,396275006,Osteoarthritis (disorder),1
+semantic,2020-09-09,Urologie,372567009,Metformin (substance),1
+semantic,2020-09-09,Urologie,318859000,Product containing precisely lisinopril 10 milligram/1 each conventional release oral tablet (clinical drug),1
+semantic,2020-09-09,Urologie,1145420004,Product containing precisely atorvastatin (as atorvastatin calcium) 20 milligram/1 each conventional release oral tablet (clinical drug),1
+semantic,2020-09-09,Urologie,1145538003,Product containing precisely pantoprazole (as pantoprazole sodium) 40 milligram/1 each gastro-resistant oral tablet (clinical drug),1
+semantic,2020-09-09,Urologie,387517004,Paracetamol (substance),1
+semantic,2020-09-09,Urologie,249543005,Abdomen soft (finding),1
+semantic,2020-09-09,Urologie,300460005,Urinary bladder non-tender (situation),1
+semantic,2020-09-09,Urologie,410006001,Digital examination of rectum (procedure),1
+semantic,2020-09-09,Urologie,446419007,Minimally enlarged prostate (finding),1
+semantic,2020-09-09,Urologie,266569009,Benign prostatic hyperplasia (disorder),1
+semantic,2020-09-09,Urologie,108560009,Tamsulosin hydrochloride (substance),1
+semantic,2020-09-09,Urologie,385747001,Fluid balance regulation management (procedure),1
+semantic,2020-09-09,Urologie,413473000,Alcohol consumption counseling,1
+semantic,2020-09-09,Urologie,183628009,Follow-up 6 weeks (finding),1
+semantic,2020-09-09,Urologie,223488008,Discussion about changes in lifestyle (procedure),1
+semantic,2020-09-09,Urologie,181422007,Entire prostate (body structure),1
+semantic,2020-09-09,Urologie,89837001,Urinary bladder structure (body structure),1
+semantic,2022-11-14,Huisarts,185278000,Seen by general practitioner (finding),1
+semantic,2022-11-14,Huisarts,185349003,Encounter for check up (procedure),1
+semantic,2022-11-14,Huisarts,44054006,Diabetes mellitus type 2 (disorder),1
+semantic,2022-11-14,Huisarts,38341003,Hypertensive disorder,1
+semantic,2022-11-14,Huisarts,370992007,Dyslipidemia (disorder),1
+semantic,2022-11-14,Huisarts,80274001,Glomerular filtration rate (observable entity),1
+semantic,2022-11-14,Huisarts,433144002,Chronic kidney disease stage 3 (disorder),1
+semantic,2022-11-14,Huisarts,312975006,Microalbuminuria (finding),1
+semantic,2022-11-14,Huisarts,27171005,Urinalysis (procedure),1
+semantic,2022-11-14,Huisarts,271076007,Urine microalbumin/creatinine ratio measurement (procedure),1
+semantic,2022-11-14,Huisarts,90708001,Kidney disease (disorder),1
+semantic,2022-11-14,Huisarts,318859000,Product containing precisely lisinopril 10 milligram/1 each conventional release oral tablet (clinical drug),1
+semantic,2022-11-14,Huisarts,11953005,Renal function (observable entity),1
+semantic,2022-11-14,Huisarts,418389000,Blood sugar management (procedure),1
+semantic,2022-11-14,Huisarts,443694000,Uncontrolled type 2 diabetes mellitus (disorder),1
+semantic,2022-11-14,Huisarts,165680008,Hemoglobin A1c between 7 percent to 10 percent indicating borderline diabetic control (finding),1
+semantic,2022-11-14,Huisarts,1340186004,Metformin therapy (procedure),1
+semantic,2022-11-14,Huisarts,170577003,Good hypertension control (finding),1
+semantic,2022-11-14,Huisarts,135840009,Blood pressure monitoring (regime/therapy),1
+semantic,2022-11-14,Huisarts,372665008,Non-steroidal anti-inflammatory agent (substance),1
+semantic,2022-11-14,Huisarts,17373004,Both kidneys (body structure),1
+semantic,2022-11-14,Huisarts,249274008,Urinary symptoms (finding),1
+semantic,2022-11-14,Huisarts,267038008,Edema (finding),1
+semantic,2022-11-14,Huisarts,2704003,Acute disease (disorder),1
+semantic,2022-11-14,Huisarts,15220000,Laboratory test (procedure),1
+semantic,2022-11-14,Huisarts,185389009,Follow-up visit (procedure),1
+semantic,2024-02-18,Wondkweek,4341000179107,Microbiology report (record artifact),1
+semantic,2024-02-18,Wondkweek,258531008,Wound swab (specimen),1
+semantic,2024-02-18,Wondkweek,708118007,No organism isolated by microbiologic culture (finding),1
+semantic,2024-02-18,Wondkweek,31001000087104,Microbiota of skin normal (finding),1
+semantic,2024-02-18,Wondkweek,397680002,Absence of signs and symptoms of infection (situation),1
+syntactic,2022-01-10,Huisarts,8580001,Both feet (body structure),1
+syntactic,2022-01-10,Huisarts,846719003,No ulcer of skin (situation),1
+syntactic,2022-01-10,Huisarts,416462003,Wound (disorder),1
+syntactic,2022-01-10,Huisarts,44054006,Type 2 diabetes mellitus,1
+syntactic,2022-01-10,Huisarts,424736006,Diabetic peripheral neuropathy,1
+syntactic,2022-01-10,Huisarts,370992007,Dyslipidemia (disorder),1
+syntactic,2022-01-10,Huisarts,373444002,Atorvastatin (substance),1
+syntactic,2022-01-10,Huisarts,38341003,Hypertensive disorder (systemic arterial),1
+syntactic,2022-01-10,Huisarts,386873009,Lisinopril,1
+syntactic,2022-01-10,Huisarts,308113006,Self-monitoring of blood glucose (procedure),1
+syntactic,2022-01-10,Huisarts,118227000,Vital signs finding,1
+syntactic,2022-01-10,Huisarts,386344002,Laboratory data interpretation,1
+syntactic,2022-01-10,Huisarts,43396009,Hemoglobin A1c measurement (procedure),1
+syntactic,2022-01-10,Huisarts,75367002,Blood pressure (observable entity),1
+syntactic,2022-06-20,Podoloog,229826007,Debridement of callus (procedure),1
+syntactic,2022-06-20,Podoloog,22253000,Pain (finding),1
+syntactic,2022-06-20,Podoloog,247441003,Erythema (finding),1
+syntactic,2022-06-20,Podoloog,297970000,Skin discharge (finding),1
+syntactic,2022-06-20,Podoloog,40733004,Infectious disease (disorder),1
+syntactic,2022-06-20,Podoloog,52475004,Xeroderma (disorder),2
+syntactic,2022-06-20,Podoloog,125643001,Open wound (disorder),1
+syntactic,2022-06-20,Podoloog,263913002,Ulceration (qualifier value),1
+syntactic,2022-06-20,Podoloog,424736006,Diabetic peripheral neuropathy,2
+syntactic,2022-06-20,Podoloog,385956002,Foot care education (procedure),1
+syntactic,2022-06-20,Podoloog,817000004,Wearing appropriate footwear,1
+syntactic,2022-06-20,Podoloog,225130001,Application of moisturizer to skin (procedure),1
+syntactic,2022-06-20,Podoloog,816993001,Fissure in skin of bilateral feet,1
+syntactic,2022-06-20,Podoloog,401069007,Blood glucose control education,1
+syntactic,2022-06-20,Podoloog,7769000,Structure of right foot,1
+syntactic,2022-06-20,Podoloog,73211009,Diabetes mellitus (disorder),1
+syntactic,2022-10-03,Huisarts,73211009,Diabetes mellitus (disorder),1
+syntactic,2022-10-03,Huisarts,313835008,HbA1c measurement (DCCT aligned),1
+syntactic,2022-10-03,Huisarts,38341003,Hypertensive disorder,1
+syntactic,2022-10-03,Huisarts,24184005,Blood pressure above reference range (finding),1
+syntactic,2022-10-03,Huisarts,371087003,Ulcer of foot due to diabetes mellitus (disorder),1
+syntactic,2022-10-03,Huisarts,7769000,Structure of right foot,1
+syntactic,2022-10-03,Huisarts,306160005,Referral to podiatry service (procedure),1
+syntactic,2022-10-03,Huisarts,418633004,Medication compliance (observable entity),1
+syntactic,2022-10-03,Huisarts,225395003,Wound assessment (procedure),1
+syntactic,2022-10-03,Huisarts,736284000,Diabetes clinical management plan,1
+syntactic,2022-10-03,Huisarts,92161000112103,Chronic wound,1
+syntactic,2022-11-14,Vaatchirurgie,63491006,Intermittent claudication,1
+syntactic,2022-11-14,Vaatchirurgie,300954003,Pain in calf (finding),1
+syntactic,2022-11-14,Vaatchirurgie,12237191000119103,Intermittent claudication of right lower limb co-occurrent and due to atherosclerosis,1
+syntactic,2022-11-14,Vaatchirurgie,446841001,Ankle brachial pressure index (observable entity),1
+syntactic,2022-11-14,Vaatchirurgie,709979004,Doppler ultrasonography of artery (procedure),1
+syntactic,2022-11-14,Vaatchirurgie,69833005,Structure of right femoral artery,1
+syntactic,2022-11-14,Vaatchirurgie,765570009,Aspirin 81 mg gastro-resistant oral tablet,1
+syntactic,2023-03-08,Huisarts,235595009,Gastroesophageal reflux disease,1
+syntactic,2023-03-08,Huisarts,395821003,Pantoprazole (substance),1
+syntactic,2023-03-08,Huisarts,371911009,Measurement of blood pressure using cuff method,1
+syntactic,2023-03-08,Huisarts,43396009,Hemoglobin A1c measurement,1
+syntactic,2023-03-08,Huisarts,401191002,Diabetic foot examination,1
+syntactic,2023-03-08,Huisarts,44054006,Type 2 diabetes mellitus,1
+syntactic,2023-03-08,Huisarts,38341003,Hypertensive disorder,1
+syntactic,2023-03-08,Huisarts,385956002,Foot care education (procedure),1
+syntactic,2023-03-08,Huisarts,118932009,Disorder of foot,1
+syntactic,2023-07-12,Spoed,29857009,Chest pain (finding),1
+syntactic,2023-07-12,Spoed,394659003,Acute coronary syndrome,1
+syntactic,2023-07-12,Spoed,29303009,Electrocardiographic procedure,1
+syntactic,2023-07-12,Spoed,105001004,Troponin T cardiac measurement (procedure),1
+syntactic,2023-07-12,Spoed,371911009,Measurement of blood pressure using cuff method (procedure),1
+syntactic,2023-07-12,Spoed,97001000119106,Localized chest pain (finding),1
+syntactic,2023-07-12,Spoed,102591006,Tenderness of chest wall (finding),2
+syntactic,2023-07-12,Spoed,281245003,Musculoskeletal chest pain,1
+syntactic,2023-07-12,Spoed,387207008,Ibuprofen (substance),1
+syntactic,2023-10-05,Huisarts,73211009,Diabetes mellitus,1
+syntactic,2023-10-05,Huisarts,237622006,Poor glycemic control (disorder),1
+syntactic,2023-10-05,Huisarts,38341003,Hypertensive disorder,1
+syntactic,2023-10-05,Huisarts,371087003,Diabetic foot ulcer,2
+syntactic,2023-10-05,Huisarts,7769000,Structure of right foot (body structure),1
+syntactic,2023-10-05,Huisarts,306160005,Referral to podiatry service,1
+syntactic,2023-10-05,Huisarts,225395003,Wound assessment (procedure),1
+syntactic,2023-10-05,Huisarts,1284985006,Diabetes mellitus management program,1
+syntactic,2023-10-05,Huisarts,416462003,Wound (disorder),1
+syntactic,2023-11-02,Podoloog,371087003,Diabetic foot ulcer,1
+syntactic,2023-11-02,Podoloog,397680002,Absence of signs and symptoms of infection (situation),1
+syntactic,2023-11-02,Podoloog,736081002,Referral for complex wound care (procedure),1
+syntactic,2023-11-02,Podoloog,170502008,Infection surveillance (regime/therapy),1
+syntactic,2023-11-02,Podoloog,7769000,Structure of right foot (body structure),1
+syntactic,2023-11-02,Podoloog,40733004,Infectious disease (disorder),1
+syntactic,2024-02-18,Huisarts,371087003,Diabetic foot ulcer,3
+syntactic,2024-02-18,Huisarts,271618001,Impaired wound healing,1
+syntactic,2024-02-18,Huisarts,274640006,Fever with chills (finding),1
+syntactic,2024-02-18,Huisarts,386661006,Fever (finding),1
+syntactic,2024-02-18,Huisarts,43724002,Chill (finding),1
+syntactic,2024-02-18,Huisarts,239163008,Wound erythema (disorder),1
+syntactic,2024-02-18,Huisarts,307229009,Non-purulent discharge from wound (finding),1
+syntactic,2024-02-18,Huisarts,258531008,Wound swab (specimen),1
+syntactic,2024-02-18,Huisarts,413625003,Bacterial culture and sensitivity,1
+syntactic,2024-02-18,Huisarts,392259005,Amoxicillin 875 mg and clavulanic acid (as clavulanate potassium) 125 mg oral tablet,1
+syntactic,2024-02-18,Huisarts,736081002,Referral for complex wound care (procedure),1
+syntactic,2024-02-18,Huisarts,736284000,Diabetes clinical management plan,1
+syntactic,2024-02-18,Huisarts,237622006,Poor glycemic control (disorder),1
+syntactic,2024-02-18,Huisarts,306118006,Referral to endocrinology service,1
+syntactic,2024-02-18,Huisarts,7769000,Structure of right foot (body structure),1
+syntactic,2024-02-18,Huisarts,225358003,Wound care (regime/therapy),1
+syntactic,2024-03-28,Spoed,10633231000119105,Cellulitis of right foot (disorder),1
+syntactic,2024-03-28,Spoed,44054006,Type 2 diabetes mellitus (disorder),1
+syntactic,2024-03-28,Spoed,840580004,Peripheral arterial disease,1
+syntactic,2024-03-28,Spoed,433144002,Chronic kidney disease stage 3,2
+syntactic,2024-03-28,Spoed,40196000,Mild pain (finding),1
+syntactic,2024-03-28,Spoed,274640006,Fever with chills (finding),1
+syntactic,2024-03-28,Spoed,162056003,No nausea (situation),1
+syntactic,2024-03-28,Spoed,386661006,Fever (finding),1
+syntactic,2024-03-28,Spoed,111583006,Leukocytosis (disorder),1
+syntactic,2024-03-28,Spoed,55235003,C-reactive protein measurement,1
+syntactic,2024-03-28,Spoed,1340183007,Ceftriaxone therapy,1
+syntactic,2024-03-28,Spoed,372602008,Metronidazole (substance),1
+syntactic,2024-03-28,Spoed,401294003,"Wound microscopy, culture and sensitivities (procedure)",1
+syntactic,2024-03-28,Spoed,225148005,Surgical debridement of wound (procedure),1
+syntactic,2024-03-28,Spoed,67866001,Insulin (substance),1
+syntactic,2024-03-28,Spoed,763304000,"Assessment using SINBAD (Site, Ischemia, Neuropathy, Bacterial Infection, Area and Depth) classification",1
+syntactic,2024-03-28,Spoed,306934005,Referral to vascular surgery service (procedure),1
+syntactic,2024-03-28,Spoed,225358003,Wound care (regime/therapy),1
+syntactic,2024-03-28,Spoed,371087003,Diabetic foot ulcer,1
+syntactic,2024-03-28,Spoed,10678431000119102,Localized swelling of right foot (finding),1
+syntactic,2024-03-28,Spoed,371911009,Measurement of blood pressure using cuff method,1
+syntactic,2024-03-28,Spoed,43396009,Hemoglobin A1c measurement (procedure),1
+syntactic,2024-03-28,Spoed,281790008,Intravenous antibiotic therapy,1
+syntactic,2024-03-28,Spoed,91302008,Sepsis (disorder),1
+syntactic,2024-03-28,Spoed,21631000119105,Limb ischemia,1
+syntactic,2024-03-28,Wondkweek,168143002,Organism isolated in wound swab by culture (finding),1
+syntactic,2024-03-28,Wondkweek,830072004,Ulcer of right foot,1
+syntactic,2024-03-28,Wondkweek,62777006,Gram stain method (procedure),1
+syntactic,2024-03-28,Wondkweek,70003006,Gram-positive cocci in clusters (finding),1
+syntactic,2024-03-28,Wondkweek,87172008,Gram-negative bacillus,1
+syntactic,2024-03-28,Wondkweek,3092008,Staphylococcus aureus (organism),1
+syntactic,2024-03-28,Wondkweek,417943000,Methicillin susceptible Staphylococcus aureus (organism),1
+syntactic,2024-03-28,Wondkweek,263776006,Heavy growth (qualifier value),1
+syntactic,2024-03-28,Wondkweek,52499004,Pseudomonas aeruginosa (organism),1
+syntactic,2024-03-28,Wondkweek,263812008,Moderate growth (qualifier value),1
+syntactic,2024-03-28,Wondkweek,372868007,Oxacillin (substance),1
+syntactic,2024-03-28,Wondkweek,372786004,Clindamycin (substance),1
+syntactic,2024-03-28,Wondkweek,372735009,Vancomycin (substance),1
+syntactic,2024-03-28,Wondkweek,392259005,Amoxicillin 875 mg and clavulanic acid (as clavulanate potassium) 125 mg oral tablet,1
+syntactic,2024-03-28,Wondkweek,346628003,Piperacillin- and tazobactam-containing product,1
+syntactic,2024-03-30,Algemene Afdeling,830072004,Ulcer of right foot (disorder),1
+syntactic,2024-03-30,Algemene Afdeling,7769000,Structure of right foot,1
+syntactic,2024-03-30,Algemene Afdeling,449738003,Inflammation of periwound skin (finding),1
+syntactic,2024-03-30,Algemene Afdeling,722192005,Localized swelling (morphologic abnormality),1
+syntactic,2024-03-30,Algemene Afdeling,3092008,Staphylococcus aureus (organism),1
+syntactic,2024-03-30,Algemene Afdeling,52499004,Pseudomonas aeruginosa (organism),1
+syntactic,2024-03-30,Algemene Afdeling,401294003,"Wound microscopy, culture and sensitivities (procedure)",1
+syntactic,2024-03-30,Algemene Afdeling,777212006,Piperacillin and tazobactam only product,1
+syntactic,2024-03-30,Algemene Afdeling,424736006,Diabetic peripheral neuropathy,1
+syntactic,2024-03-30,Algemene Afdeling,4251000179103,Magnetic resonance imaging report,1
+syntactic,2024-03-30,Algemene Afdeling,294981000119103,Osteomyelitis of foot (disorder),1
+syntactic,2024-03-30,Algemene Afdeling,85875009,Debridement of wound of skin,1
+syntactic,2024-03-30,Algemene Afdeling,238149007,Systemic inflammatory response syndrome,1
+syntactic,2024-03-30,Algemene Afdeling,386661006,Fever (finding),2
+syntactic,2024-03-30,Algemene Afdeling,26604007,Complete blood count,1
+syntactic,2024-03-30,Algemene Afdeling,55235003,C-reactive protein measurement,1
+syntactic,2024-03-30,Algemene Afdeling,270982000,Serum lactate measurement,1
+syntactic,2024-03-30,Algemene Afdeling,446131002,Blood specimen obtained for blood culture,1
+syntactic,2024-03-30,Algemene Afdeling,225395003,Wound assessment (procedure),1
+syntactic,2024-04-01,Intensieve Zorgen,76571007,Septic shock (disorder),1
+syntactic,2024-04-01,Intensieve Zorgen,44054006,Diabetes mellitus type 2 (disorder),1
+syntactic,2024-04-01,Intensieve Zorgen,237622006,Poor glycemic control (disorder),1
+syntactic,2024-04-01,Intensieve Zorgen,38341003,Hypertensive disorder,1
+syntactic,2024-04-01,Intensieve Zorgen,433144002,Chronic kidney disease stage 3 (disorder),1
+syntactic,2024-04-01,Intensieve Zorgen,840580004,Peripheral arterial disease (disorder),1
+syntactic,2024-04-01,Intensieve Zorgen,1137511009,Progressive weakness of muscle (finding),1
+syntactic,2024-04-01,Intensieve Zorgen,386661006,Fever (finding),2
+syntactic,2024-04-01,Intensieve Zorgen,419284004,Altered mental status (finding),1
+syntactic,2024-04-01,Intensieve Zorgen,239163008,Wound erythema (disorder),1
+syntactic,2024-04-01,Intensieve Zorgen,1366725006,Tissue necrosis (disorder),2
+syntactic,2024-04-01,Intensieve Zorgen,830072004,Ulcer of right foot,1
+syntactic,2024-04-01,Intensieve Zorgen,130987000,Acute confusion (finding),1
+syntactic,2024-04-01,Intensieve Zorgen,11092001,Sinus tachycardia (finding),1
+syntactic,2024-04-01,Intensieve Zorgen,271823003,Tachypnea (finding),1
+syntactic,2024-04-01,Intensieve Zorgen,409055009,Ineffective tissue perfusion (finding),1
+syntactic,2024-04-01,Intensieve Zorgen,722278006,Acute kidney injury due to sepsis,1
+syntactic,2024-04-01,Intensieve Zorgen,14669001,Acute kidney injury (disorder),1
+syntactic,2024-04-01,Intensieve Zorgen,445646001,Prerenal azotemia (disorder),2
+syntactic,2024-04-01,Intensieve Zorgen,111583006,Leukocytosis,2
+syntactic,2024-04-01,Intensieve Zorgen,43396009,Hemoglobin A1c measurement,1
+syntactic,2024-04-01,Intensieve Zorgen,237623001,Acute hyperglycemia (disorder),1
+syntactic,2024-04-01,Intensieve Zorgen,30088009,Blood culture (procedure),1
+syntactic,2024-04-01,Intensieve Zorgen,372735009,Vancomycin (substance),1
+syntactic,2024-04-01,Intensieve Zorgen,446131002,Blood specimen obtained for blood culture,1
+syntactic,2024-04-01,Intensieve Zorgen,430701006,Resuscitation using intravenous fluid (procedure),1
+syntactic,2024-04-01,Intensieve Zorgen,50060141000188106,Infusion of norepinephrine,1
+syntactic,2024-04-01,Intensieve Zorgen,7431000175109,Refractory hypotension,1
+syntactic,2024-04-01,Intensieve Zorgen,85875009,Debridement of wound of skin,1
+syntactic,2024-04-01,Intensieve Zorgen,81723002,Amputation (procedure),1
+syntactic,2024-04-01,Intensieve Zorgen,225358003,Wound care (regime/therapy),1
+syntactic,2024-04-01,Intensieve Zorgen,264533003,Hypoperfusion (qualifier value),1
+syntactic,2024-04-01,Intensieve Zorgen,80394007,Hyperglycemia (disorder),1
+syntactic,2024-04-01,Intensieve Zorgen,870386000,Vasopressor therapy (procedure),1
+syntactic,2024-04-01,Intensieve Zorgen,103744005,Administration of intravenous fluids,1
+syntactic,2024-04-01,Intensieve Zorgen,281789004,Antibiotic therapy (procedure),1
+syntactic,2024-04-01,Intensieve Zorgen,182810003,Intensive care monitoring (regime/therapy),1
+syntactic,2024-03-31,Hemocultuur,30088009,Blood culture (procedure),1
+syntactic,2024-03-31,Hemocultuur,122551003,Peripheral blood specimen,1
+syntactic,2024-03-31,Hemocultuur,59206002,Gram-positive coccus (organism),1
+syntactic,2024-03-31,Hemocultuur,3092008,Staphylococcus aureus (organism),1
+syntactic,2024-03-31,Hemocultuur,442073005,Infection by methicillin sensitive Staphylococcus aureus,2
+syntactic,2024-03-31,Hemocultuur,431193003,Infection of bloodstream,1
+syntactic,2024-03-31,Hemocultuur,365705006,Antimicrobial susceptibility - finding,1
+syntactic,2024-03-31,Hemocultuur,372868007,Oxacillin (substance),1
+syntactic,2024-03-31,Hemocultuur,372786004,Clindamycin (substance),1
+syntactic,2024-03-31,Hemocultuur,372735009,Vancomycin (substance),1
+syntactic,2024-03-30,Rx Voet,426311001,Plain X-ray of right foot,1
+syntactic,2024-03-30,Rx Voet,294981000119103,Osteomyelitis of foot,1
+syntactic,2024-03-30,Rx Voet,371087003,Diabetic foot ulcer,1
+syntactic,2024-03-30,Rx Voet,30425001,Osteolysis (morphologic abnormality),1
+syntactic,2024-03-30,Rx Voet,41910004,Periostitis (disorder),1
+syntactic,2024-03-30,Rx Voet,725401007,Structure of soft tissue of foot,1
+syntactic,2024-03-30,Rx Voet,736680000,Gas (state of matter),1
+syntactic,2024-03-30,Rx Voet,404684003,Clinical finding,1
+syntactic,2024-03-30,Rx Voet,7769000,Structure of right foot,1
+syntactic,2024-03-30,Rx Voet,263493007,Clinical status (attribute),1
+syntactic,2024-04-01,MRI Voet,2301000087101,Magnetic resonance imaging of right foot with contrast (procedure),1
+syntactic,2024-04-01,MRI Voet,7769000,Structure of right foot,1
+syntactic,2024-04-01,MRI Voet,763293000,"Size (area, depth), Sepsis, Arteriopathy, Denervation system (assessment scale)",1
+syntactic,2024-04-01,MRI Voet,371087003,Diabetic foot ulcer,1
+syntactic,2024-04-01,MRI Voet,95347000,Skin necrosis,1
+syntactic,2024-04-01,MRI Voet,294981000119103,Osteomyelitis of foot (disorder),1
+syntactic,2024-04-01,MRI Voet,6411000179107,Edema of bone marrow,1
+syntactic,2024-04-01,MRI Voet,14016003,Bone marrow structure,1
+syntactic,2024-04-01,MRI Voet,443928008,Necrotizing soft tissue infection,1
+syntactic,2024-04-01,MRI Voet,182777000,Monitoring of patient (regime/therapy),1
+syntactic,2024-04-01,MRI Voet,55235003,C-reactive protein measurement,1
+syntactic,2024-04-01,MRI Voet,87784001,Soft tissue,1
+syntactic,2011-10-02,Huisarts,17173007,Excessive thirst (finding),2
+syntactic,2011-10-02,Huisarts,28442001,Polyuria (finding),1
+syntactic,2011-10-02,Huisarts,84229001,Fatigue (finding),2
+syntactic,2011-10-02,Huisarts,262285001,Weight decreased (finding),1
+syntactic,2011-10-02,Huisarts,404640003,Dizziness (finding),1
+syntactic,2011-10-02,Huisarts,63102001,Visual disturbance (disorder),1
+syntactic,2011-10-02,Huisarts,44054006,Type 2 diabetes mellitus,3
+syntactic,2011-10-02,Huisarts,38341003,Hypertensive disorder,1
+syntactic,2011-10-02,Huisarts,49601007,Disorder of cardiovascular system,1
+syntactic,2011-10-02,Huisarts,8517006,Ex-smoker (finding),1
+syntactic,2011-10-02,Huisarts,53741008,Coronary arteriosclerosis (disorder),1
+syntactic,2011-10-02,Huisarts,162864005,Body mass index 30+ - obesity (finding),1
+syntactic,2011-10-02,Huisarts,414916001,Obesity (disorder),1
+syntactic,2011-10-02,Huisarts,860981000,No dehydration (situation),1
+syntactic,2011-10-02,Huisarts,301114007,Finding of regularity of heart rhythm,1
+syntactic,2011-10-02,Huisarts,301131000,Heart murmur absent (situation),1
+syntactic,2011-10-02,Huisarts,267038008,Edema (finding),1
+syntactic,2011-10-02,Huisarts,1344906007,Diabetic peripheral neuropathy absent,1
+syntactic,2011-10-02,Huisarts,271062006,Fasting blood glucose measurement (procedure),1
+syntactic,2011-10-02,Huisarts,113079009,Low density lipoprotein cholesterol measurement,1
+syntactic,2011-10-02,Huisarts,28036006,High density lipoprotein cholesterol measurement,1
+syntactic,2011-10-02,Huisarts,302870006,Hypertriglyceridemia (disorder),1
+syntactic,2011-10-02,Huisarts,81141003,Normal renal function (finding),1
+syntactic,2011-10-02,Huisarts,325278007,Metformin hydrochloride 500 mg oral tablet,1
+syntactic,2011-10-02,Huisarts,308113006,Self-monitoring of blood glucose,1
+syntactic,2011-10-02,Huisarts,426255005,Dysglycemia,1
+syntactic,2011-10-02,Huisarts,370992007,Dyslipidemia (disorder),1
+syntactic,2011-10-02,Huisarts,1145420004,Atorvastatin (as atorvastatin calcium) 20 mg oral tablet,1
+syntactic,2011-10-02,Huisarts,16254007,Lipid panel (procedure),1
+syntactic,2014-05-17,Huisarts,17173007,Excessive thirst (finding),1
+syntactic,2014-05-17,Huisarts,28442001,Polyuria (finding),1
+syntactic,2014-05-17,Huisarts,84229001,Fatigue (finding),1
+syntactic,2014-05-17,Huisarts,698065002,Acid reflux (finding),1
+syntactic,2014-05-17,Huisarts,102622004,Regurgitation of food,1
+syntactic,2014-05-17,Huisarts,40739000,Dysphagia (disorder),1
+syntactic,2014-05-17,Huisarts,262285001,Weight decreased (finding),1
+syntactic,2014-05-17,Huisarts,235595009,Gastroesophageal reflux disease,1
+syntactic,2014-05-17,Huisarts,424753004,"Dietary management education, guidance, and counseling",1
+syntactic,2014-05-17,Huisarts,255641001,Caffeine (substance),1
+syntactic,2014-05-17,Huisarts,219006,Current drinker,1
+syntactic,2014-05-17,Huisarts,228071009,Spicy food,1
+syntactic,2014-05-17,Huisarts,182985004,Response to treatment,1
+syntactic,2014-05-17,Huisarts,16331000,Heartburn (finding),1
+syntactic,2015-02-12,Huisarts,24184005,Blood pressure above reference range (finding),1
+syntactic,2015-02-12,Huisarts,312975006,Microalbuminuria (finding),1
+syntactic,2015-02-12,Huisarts,223488008,Discussion about changes in lifestyle (procedure),1
+syntactic,2015-02-12,Huisarts,386619000,Low sodium diet (finding),1
+syntactic,2015-02-12,Huisarts,1171000175109,Increased physical activity (finding),1
+syntactic,2015-02-12,Huisarts,698471002,Patient advised about weight management,1
+syntactic,2018-06-06,Huisarts,84445001,Joint stiffness (finding),1
+syntactic,2018-06-06,Huisarts,282195009,Difficulty walking up stairs (finding),1
+syntactic,2018-06-06,Huisarts,299378008,Knee joint crepitus (finding),1
+syntactic,2018-06-06,Huisarts,36701003,Both knees (body structure),1
+syntactic,2018-06-06,Huisarts,299322007,Swelling of knee joint (finding),1
+syntactic,2018-06-06,Huisarts,822962003,Redness of skin over lesion (finding),1
+syntactic,2018-06-06,Huisarts,240006007,Ligamentous laxity of knee,1
+syntactic,2018-06-06,Huisarts,112981000119107,Bilateral osteoarthritis of knees,1
+syntactic,2018-06-06,Huisarts,168537006,Plain X-ray (procedure),1
+syntactic,2018-06-06,Huisarts,239873007,Osteoarthritis of knee (disorder),1
+syntactic,2018-06-06,Huisarts,387517004,Acetaminophen (Paracetamol),1
+syntactic,2018-06-06,Huisarts,275919002,Weight loss advised (situation),1
+syntactic,2018-06-06,Huisarts,722138006,Physiotherapy,1
+syntactic,2018-06-06,Huisarts,51998003,Therapeutic exercise (regime/therapy),1
+syntactic,2018-06-06,Huisarts,414916001,Obesity (disorder),1
+syntactic,2018-06-06,Huisarts,21278004,Passive movement (observable entity),1
+syntactic,2018-06-06,Huisarts,1003722009,Pain of knee region (finding),1
+syntactic,2018-06-06,Huisarts,278414003,Pain management (procedure),1
+syntactic,2018-06-01,Rx Knie,1290411008,Plain X-ray of knee region under stress (procedure),1
+syntactic,2018-06-01,Rx Knie,399348003,Antero-posterior projection (qualifier value),1
+syntactic,2018-06-01,Rx Knie,244552003,Structure of medial compartment of knee,1
+syntactic,2018-06-01,Rx Knie,88998003,Osteophyte (morphologic abnormality),1
+syntactic,2018-06-01,Rx Knie,210562007,Entire right knee (body structure),1
+syntactic,2018-06-01,Rx Knie,125605004,Fracture of bone (disorder),1
+syntactic,2018-06-01,Rx Knie,87642003,Dislocation (morphologic abnormality),1
+syntactic,2018-06-01,Rx Knie,387637008,Effusion of joint (disorder),1
+syntactic,2018-06-01,Rx Knie,112981000119107,Bilateral osteoarthritis of knees,2
+syntactic,2018-06-01,Rx Knie,239873007,Osteoarthritis of knee,1
+syntactic,2018-06-01,Rx Knie,72696002,Knee region structure (body structure),1
+syntactic,2020-09-09,Urologie,5972002,Delay when starting to pass urine (finding),1
+syntactic,2020-09-09,Urologie,139394000,Nocturia (finding),1
+syntactic,2020-09-09,Urologie,34436003,Blood in urine (finding),1
+syntactic,2020-09-09,Urologie,49650001,Dysuria (finding),1
+syntactic,2020-09-09,Urologie,68566005,Urinary tract infectious disease,1
+syntactic,2020-09-09,Urologie,386661006,Fever (finding),1
+syntactic,2020-09-09,Urologie,248456009,Shivering or rigors (finding),1
+syntactic,2020-09-09,Urologie,262285001,Weight decreased (finding),1
+syntactic,2020-09-09,Urologie,44054006,Diabetes mellitus type 2 (disorder),1
+syntactic,2020-09-09,Urologie,38341003,Hypertensive disorder,1
+syntactic,2020-09-09,Urologie,370992007,Dyslipidemia (disorder),1
+syntactic,2020-09-09,Urologie,235595009,Gastroesophageal reflux disease,1
+syntactic,2020-09-09,Urologie,396275006,Osteoarthritis (disorder),1
+syntactic,2020-09-09,Urologie,318859000,Lisinopril 10 mg oral tablet,1
+syntactic,2020-09-09,Urologie,1145420004,Atorvastatin (as atorvastatin calcium) 20 mg oral tablet,1
+syntactic,2020-09-09,Urologie,1145538003,Pantoprazole (as pantoprazole sodium) 40 mg gastro-resistant oral tablet,1
+syntactic,2020-09-09,Urologie,387517004,Acetaminophen (Paracetamol),1
+syntactic,2020-09-09,Urologie,249543005,Abdomen soft (finding),1
+syntactic,2020-09-09,Urologie,21514008,Structure of genitourinary system,1
+syntactic,2020-09-09,Urologie,410006001,Digital examination of rectum (procedure),1
+syntactic,2020-09-09,Urologie,266569009,Benign prostatic hyperplasia (disorder),2
+syntactic,2020-09-09,Urologie,41216001,Prostate (body structure),1
+syntactic,2020-09-09,Urologie,780565008,Tamsulosin only product in oral dose form,1
+syntactic,2020-09-09,Urologie,255641001,Caffeine (substance),1
+syntactic,2020-09-09,Urologie,413473000,Alcohol consumption counseling,1
+syntactic,2020-09-09,Urologie,818983003,Abdomen (body structure),1
+syntactic,2020-09-09,Urologie,89837001,Urinary bladder structure,1
+syntactic,2022-11-14,Huisarts,44054006,Type 2 diabetes mellitus,1
+syntactic,2022-11-14,Huisarts,38341003,Hypertensive disorder,1
+syntactic,2022-11-14,Huisarts,370992007,Dyslipidemia (disorder),1
+syntactic,2022-11-14,Huisarts,700378005,Chronic kidney disease stage 3A (disorder),1
+syntactic,2022-11-14,Huisarts,433144002,Chronic kidney disease stage 3 (disorder),1
+syntactic,2022-11-14,Huisarts,312975006,Microalbuminuria (finding),1
+syntactic,2022-11-14,Huisarts,27171005,Urinalysis (procedure),1
+syntactic,2022-11-14,Huisarts,307541003,Lower urinary tract symptoms (finding),1
+syntactic,2022-11-14,Huisarts,267038008,Edema (finding),1
+syntactic,2022-11-14,Huisarts,318859000,Lisinopril 10 mg oral tablet,1
+syntactic,2022-11-14,Huisarts,182809008,Renal function monitoring,1
+syntactic,2022-11-14,Huisarts,237622006,Poor glycemic control (disorder),1
+syntactic,2022-11-14,Huisarts,11816003,Diet education (procedure),1
+syntactic,2022-11-14,Huisarts,386521001,Bedside laboratory testing (procedure),1
+syntactic,2022-11-14,Huisarts,709044004,Chronic kidney disease,1
+syntactic,2022-11-14,Huisarts,103740001,Periodic physical examination (procedure),1
+syntactic,2024-02-18,Wondkweek,401294003,"Wound microscopy, culture and sensitivities (procedure)",1
+syntactic,2024-02-18,Wondkweek,17636008,Specimen collection (procedure),1
+syntactic,2024-02-18,Wondkweek,250465006,Bacterial growth (finding),1
+syntactic,2024-02-18,Wondkweek,31001000087104,Normal cutaneous microbiota,1
+syntactic,2024-02-18,Wondkweek,168144008,No organism isolated in wound swab by culture (finding),1
+syntactic,2024-02-18,Wondkweek,40733004,Infectious disease (disorder),1
