@@ -7,11 +7,11 @@ from datetime import datetime
 
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-OUTPUT_DIR = os.path.join(BASE_DIR, "analysis_outputs")
+OUTPUT_DIR = os.path.join(BASE_DIR, "output", "analysis")
 
 RUNS = {
-    "semantic": os.path.join(BASE_DIR, "linked_spans_semantic.json"),
-    "syntactic": os.path.join(BASE_DIR, "linked_spans_syntactic.json"),
+    "vector": os.path.join(BASE_DIR, "output", "linked_spans_semantic.json"),
+    "example": os.path.join(BASE_DIR, "output", "example_semantic_links.json"),
 }
 
 
@@ -159,6 +159,9 @@ def main():
     per_doc_by_run = {}
 
     for run_label, path in RUNS.items():
+        if not os.path.exists(path):
+            print(f"Skipping missing run '{run_label}': {path}")
+            continue
         documents = load_json(path)
         per_doc = compute_counts(documents)
 

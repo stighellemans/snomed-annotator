@@ -183,4 +183,28 @@ cython_debug/
 
 .env
 
-SnomedCT_InternationalRF2_*
+### Project-local generated and licensed artifacts
+.DS_Store
+agentic_linker/.DS_Store
+analysis_outputs/
+cache/*
+output/*
+data/*
+!cache/.gitkeep
+!output/.gitkeep
+!output/example_semantic_links.json
+!data/example_documents.json
+
+# SNOMED CT release packages are licensed and too large for the repo.
+SnomedCT*
+SNOMED*
+*RF2*.zip
+*.zip
+
+# Generated linker/vector artifacts.
+linked_spans*.json
+agentic_linker/run.log
+agentic_linker/*.log
+snomed_vector_db*.jsonl
+snomed_vector_db*.index
+snomed_vector_db*.state.json
