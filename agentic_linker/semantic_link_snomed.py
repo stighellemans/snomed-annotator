@@ -1,14 +1,13 @@
 import argparse
 import json
+import logging
 import os
 import sys
-from typing import Any, Dict, List, Tuple, Optional
+from typing import Any, Dict, List, Tuple
 
-import requests
-from openai import OpenAI
 import faiss  # type: ignore
 import numpy as np
-import logging
+from openai import OpenAI
 
 
 def read_json(path: str) -> Any:
@@ -17,133 +16,15 @@ def read_json(path: str) -> Any:
 
 
 def write_json(path: str, data: Any) -> None:
+    ensure_parent_dir(path)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
-def snowstorm_search(base_url: str, term: str, limit: int, language: str) -> List[Dict[str, Any]]:
-    url = f"{base_url.rstrip('/')}/browser/MAIN/descriptions"
-    params = {
-        "term": term,
-        "active": "true",
-        "conceptActive": "true",
-        "groupByConcept": "true",
-        "limit": str(limit),
-    }
-    if language:
-        params["language"] = language
-    resp = requests.get(url, params=params, timeout=30)
-    resp.raise_for_status()
-    data = resp.json()
-    items = data.get("items", [])
-    results = []
-    for item in items:
-        concept = item.get("concept") or {}
-        results.append(
-            {
-                "concept_id": concept.get("conceptId"),
-                "pt": concept.get("pt"),
-                "fsn": concept.get("fsn"),
-                "matched_term": item.get("term"),
-            }
-        )
-    return results[:limit]
-
-
-def snowstorm_get(base_url: str, path: str, params: Optional[Dict[str, str]] = None) -> Optional[Dict[str, Any]]:
-    url = f"{base_url.rstrip('/')}/{path.lstrip('/')}"
-    try:
-        resp = requests.get(url, params=params, timeout=30)
-        if resp.status_code == 404:
-            return None
-        resp.raise_for_status()
-        return resp.json()
-    except requests.RequestException as exc:
-        logging.warning("Snowstorm request failed path=%s error=%s", path, exc)
-        return None
-
-
-def _extract_terms(payload: Any, max_items: int = 6) -> List[str]:
-    items: List[Any] = []
-    if isinstance(payload, dict):
-        if "items" in payload and isinstance(payload["items"], list):
-            items = payload["items"]
-        elif "concepts" in payload and isinstance(payload["concepts"], list):
-            items = payload["concepts"]
-        else:
-            items = [payload]
-    elif isinstance(payload, list):
-        items = payload
-    terms: List[str] = []
-    for item in items:
-        if not isinstance(item, dict):
-            continue
-        term = item.get("pt") or item.get("fsn") or item.get("term")
-        if isinstance(term, dict):
-            term = term.get("pt") or term.get("fsn") or term.get("term")
-        if term and term not in terms:
-            terms.append(term)
-        if len(terms) >= max_items:
-            break
-    return terms
-
-
-def _stringify_list(values: List[Any], max_items: int = 5) -> List[str]:
-    out: List[str] = []
-    for v in values[:max_items]:
-        if isinstance(v, dict):
-            v = v.get("pt") or v.get("fsn") or v.get("term")
-        if v is None:
-            continue
-        s = str(v)
-        if s not in out:
-            out.append(s)
-    return out
-
-
-def _extract_relationships(payload: Any, max_items: int = 6) -> List[str]:
-    items: List[Any] = []
-    if isinstance(payload, dict):
-        if "items" in payload and isinstance(payload["items"], list):
-            items = payload["items"]
-        else:
-            items = [payload]
-    elif isinstance(payload, list):
-        items = payload
-    rels: List[str] = []
-    for item in items:
-        if not isinstance(item, dict):
-            continue
-        type_term = None
-        target_term = None
-        type_obj = item.get("type") or item.get("typePt") or item.get("typeFsn")
-        if isinstance(type_obj, dict):
-            type_term = type_obj.get("pt") or type_obj.get("fsn") or type_obj.get("term")
-        elif isinstance(type_obj, str):
-            type_term = type_obj
-        dest = item.get("destination") or item.get("target") or item.get("value") or item.get("concept")
-        if isinstance(dest, dict):
-            target_term = dest.get("pt") or dest.get("fsn") or dest.get("term")
-        elif isinstance(dest, str):
-            target_term = dest
-        if type_term and target_term:
-            rel = f"{type_term} -> {target_term}"
-            if rel not in rels:
-                rels.append(rel)
-        if len(rels) >= max_items:
-            break
-    return rels
-
-
-def enrich_candidate_with_snowstorm(base_url: str, concept_id: str) -> Dict[str, Any]:
-    parents = snowstorm_get(base_url, f"browser/MAIN/concepts/{concept_id}/parents")
-    children = snowstorm_get(base_url, f"browser/MAIN/concepts/{concept_id}/children")
-    relationships = snowstorm_get(base_url, f"browser/MAIN/concepts/{concept_id}/relationships")
-    return {
-        "parents": _extract_terms(parents),
-        "children": _extract_terms(children),
-        "relationships": _extract_relationships(relationships),
-    }
+def ensure_parent_dir(path: str) -> None:
+    parent = os.path.dirname(path)
+    if parent:
+        os.makedirs(parent, exist_ok=True)
 
 
 def embed_texts(client: OpenAI, model: str, texts: List[str]) -> List[List[float]]:
@@ -164,6 +45,7 @@ def vector_search(
     query_norm = sum(x * x for x in query_embedding) ** 0.5
     if query_norm == 0:
         return []
+
     best: List[Tuple[float, Dict[str, Any]]] = []
     with open(db_path, "r", encoding="utf-8") as f:
         for line in f:
@@ -185,19 +67,8 @@ def vector_search(
             elif score > best[-1][0]:
                 best[-1] = (score, row)
                 best.sort(key=lambda x: x[0], reverse=True)
-    results = []
-    for score, row in best:
-        term = row.get("term", "")
-        results.append(
-            {
-                "concept_id": row.get("concept_id"),
-                "pt": term,
-                "fsn": "",
-                "matched_term": term,
-                "vector_score": score,
-            }
-        )
-    return results
+
+    return [_candidate_from_row(row, score) for score, row in best]
 
 
 def load_faiss_meta(meta_path: str) -> List[Dict[str, Any]]:
@@ -222,46 +93,49 @@ def faiss_vector_search(
     query: str,
     top_k: int,
 ) -> List[Dict[str, Any]]:
-    if faiss is None or np is None:
-        return []
-    q = embed_texts(client, embedding_model, [query])[0]
-    qv = np.asarray(q, dtype="float32")
-    norm = float(np.linalg.norm(qv))
+    query_embedding = embed_texts(client, embedding_model, [query])[0]
+    query_vector = np.asarray(query_embedding, dtype="float32")
+    norm = float(np.linalg.norm(query_vector))
     if norm == 0:
         return []
-    qv = qv / norm
-    scores, ids = index.search(qv.reshape(1, -1), top_k)
-    results = []
+    query_vector = query_vector / norm
+    scores, ids = index.search(query_vector.reshape(1, -1), top_k)
+    candidates = []
     for score, idx in zip(scores[0], ids[0]):
         if idx < 0 or idx >= len(meta):
             continue
-        row = meta[idx]
-        term = row.get("term", "")
-        results.append(
-            {
-                "concept_id": row.get("concept_id"),
-                "pt": term,
-                "fsn": "",
-                "matched_term": term,
-                "vector_score": float(score),
-            }
-        )
-    return results
+        candidates.append(_candidate_from_row(meta[idx], float(score)))
+    return candidates
+
+
+def _candidate_from_row(row: Dict[str, Any], score: float) -> Dict[str, Any]:
+    term = row.get("term", "")
+    return {
+        "concept_id": row.get("concept_id"),
+        "pt": term,
+        "fsn": term if row.get("type_id") == "900000000000003001" else "",
+        "matched_term": term,
+        "vector_score": float(score),
+    }
 
 
 def find_span(text: str, span_text: str) -> Dict[str, int]:
     start = text.find(span_text)
     if start == -1:
-        lower_text = text.lower()
-        lower_span = span_text.lower()
-        start = lower_text.find(lower_span)
+        start = text.lower().find(span_text.lower())
         if start == -1:
             return {"start": -1, "end": -1}
-    end = start + len(span_text)
-    return {"start": start, "end": end}
+    return {"start": start, "end": start + len(span_text)}
 
 
-def call_openai_structured(client: OpenAI, model: str, system: str, user: str, schema_name: str, schema: Dict[str, Any]) -> Dict[str, Any]:
+def call_openai_structured(
+    client: OpenAI,
+    model: str,
+    system: str,
+    user: str,
+    schema_name: str,
+    schema: Dict[str, Any],
+) -> Dict[str, Any]:
     response = client.responses.create(
         model=model,
         input=[
@@ -279,8 +153,8 @@ def call_openai_structured(client: OpenAI, model: str, system: str, user: str, s
     )
     try:
         return json.loads(response.output_text)
-    except json.JSONDecodeError:
-        raise RuntimeError("OpenAI response was not valid JSON")
+    except json.JSONDecodeError as exc:
+        raise RuntimeError("OpenAI response was not valid JSON") from exc
 
 
 def extract_spans(client: OpenAI, model: str, text: str, max_spans: int) -> List[Dict[str, Any]]:
@@ -316,8 +190,47 @@ def extract_spans(client: OpenAI, model: str, text: str, max_spans: int) -> List
         "required": ["spans"],
         "additionalProperties": False,
     }
-    result = call_openai_structured(client, model, system, user, "span_extraction", schema)
-    return result.get("spans", [])
+    return call_openai_structured(client, model, system, user, "span_extraction", schema).get("spans", [])
+
+
+def suggest_search_terms(
+    client: OpenAI,
+    model: str,
+    context: str,
+    span_text: str,
+    english_term: str,
+    max_terms: int,
+) -> List[str]:
+    if max_terms <= 0:
+        return []
+    system = (
+        "You are a clinical terminologist. Suggest concise English SNOMED CT search terms. "
+        "Return short noun phrases only, no punctuation."
+    )
+    user = (
+        "Context (Dutch):\n"
+        f"{context}\n\n"
+        "Span text:\n"
+        f"{span_text}\n\n"
+        "Current English search term:\n"
+        f"{english_term}\n\n"
+        f"Provide up to {max_terms} alternative search terms."
+    )
+    schema = {
+        "type": "object",
+        "properties": {"terms": {"type": "array", "items": {"type": "string"}}},
+        "required": ["terms"],
+        "additionalProperties": False,
+    }
+    result = call_openai_structured(client, model, system, user, "term_suggestions", schema)
+    terms = []
+    for term in result.get("terms", []):
+        cleaned = term.strip()
+        if cleaned and cleaned.lower() != english_term.lower() and cleaned not in terms:
+            terms.append(cleaned)
+        if len(terms) >= max_terms:
+            break
+    return terms
 
 
 def choose_best_concept(
@@ -328,26 +241,20 @@ def choose_best_concept(
     english_term: str,
     candidates: List[Dict[str, Any]],
 ) -> Dict[str, Any]:
+    if not candidates:
+        return {"status": "none", "snomed_id": "", "term": "", "confidence": 0}
+
     system = (
         "You are a clinical terminologist. Choose the best SNOMED CT concept from the candidate list. "
         "If none match, return status=none."
     )
-    candidate_lines = []
-    for c in candidates:
-        parents = ", ".join(_stringify_list(c.get("parents", [])))
-        children = ", ".join(_stringify_list(c.get("children", [])))
-        relationships = ", ".join(_stringify_list(c.get("relationships", [])))
-        extra_bits = []
-        if parents:
-            extra_bits.append(f"parents=[{parents}]")
-        if children:
-            extra_bits.append(f"children=[{children}]")
-        if relationships:
-            extra_bits.append(f"rels=[{relationships}]")
-        extra = f" | {'; '.join(extra_bits)}" if extra_bits else ""
-        candidate_lines.append(
-            f"- {c.get('concept_id')} | {c.get('pt')} | {c.get('fsn')} | matched={c.get('matched_term')}{extra}"
+    candidate_lines = [
+        (
+            f"- {c.get('concept_id')} | {c.get('pt')} | {c.get('fsn')} | "
+            f"matched={c.get('matched_term')} | score={c.get('vector_score'):.4f}"
         )
+        for c in candidates
+    ]
     user = (
         "Context (Dutch):\n"
         f"{context}\n\n"
@@ -371,79 +278,74 @@ def choose_best_concept(
         "required": ["status", "snomed_id", "term", "confidence"],
         "additionalProperties": False,
     }
-    result = call_openai_structured(client, model, system, user, "concept_selection", schema)
-    return result
+    return call_openai_structured(client, model, system, user, "concept_selection", schema)
 
 
-def suggest_search_terms(
+def collect_candidates(
+    search_terms: List[str],
     client: OpenAI,
-    model: str,
-    context: str,
-    span_text: str,
-    english_term: str,
-    max_terms: int,
-) -> List[str]:
-    system = (
-        "You are a clinical terminologist. Suggest concise English SNOMED CT search terms. "
-        "Return short noun phrases only, no punctuation."
-    )
-    user = (
-        "Context (Dutch):\n"
-        f"{context}\n\n"
-        "Span text:\n"
-        f"{span_text}\n\n"
-        "Current English search term:\n"
-        f"{english_term}\n\n"
-        f"Provide up to {max_terms} alternative search terms."
-    )
-    schema = {
-        "type": "object",
-        "properties": {
-            "terms": {"type": "array", "items": {"type": "string"}},
-        },
-        "required": ["terms"],
-        "additionalProperties": False,
-    }
-    result = call_openai_structured(client, model, system, user, "term_suggestions", schema)
-    terms = []
-    for term in result.get("terms", []):
-        cleaned = term.strip()
-        if cleaned and cleaned not in terms and cleaned.lower() != english_term.lower():
-            terms.append(cleaned)
-        if len(terms) >= max_terms:
-            break
-    return terms
+    embedding_model: str,
+    vector_db: str,
+    faiss_index: Any,
+    faiss_meta: List[Dict[str, Any]],
+    top_k: int,
+    min_score: float,
+) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
+    by_concept: Dict[str, Dict[str, Any]] = {}
+    attempts = []
+    for term in search_terms:
+        if faiss_index is not None:
+            candidates = faiss_vector_search(faiss_index, faiss_meta, client, embedding_model, term, top_k)
+            source = "faiss"
+        else:
+            candidates = vector_search(vector_db, client, embedding_model, term, top_k)
+            source = "vector"
+        candidates = [c for c in candidates if c.get("vector_score", 0) >= min_score]
+        attempts.append({"term": term, "candidates": len(candidates), "source": source})
+        for candidate in candidates:
+            concept_id = candidate.get("concept_id")
+            if not concept_id:
+                continue
+            existing = by_concept.get(concept_id)
+            if existing is None or candidate.get("vector_score", 0) > existing.get("vector_score", 0):
+                by_concept[concept_id] = candidate
+
+    candidates = sorted(by_concept.values(), key=lambda row: row.get("vector_score", 0), reverse=True)
+    return candidates[:top_k], attempts
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Agentic SNOMED linker using Snowstorm + OpenAI")
-    parser.add_argument("--input", default="documents.json")
-    parser.add_argument("--output", default="linked_spans.json")
-    parser.add_argument("--base-url", default="http://localhost:8080")
+    parser = argparse.ArgumentParser(description="Vector-only SNOMED linker using OpenAI")
+    parser.add_argument("--input", default="data/example_documents.json")
+    parser.add_argument("--output", default="output/linked_spans_semantic.json")
     parser.add_argument("--model", default="gpt-5-mini-2025-08-07")
-    parser.add_argument("--language", default="en")
     parser.add_argument("--max-spans", type=int, default=50)
-    parser.add_argument("--candidate-limit", type=int, default=8)
     parser.add_argument("--max-search-tries", type=int, default=3)
     parser.add_argument("--min-confidence", type=float, default=0.4)
-    parser.add_argument("--embedding-model", default="text-embedding-3-small")
-    parser.add_argument("--vector-db", default="agentic_linker/snomed_vector_db.jsonl")
+    parser.add_argument("--embedding-model", default=os.environ.get("OPENAI_EMBEDDING_MODEL", "text-embedding-3-small"))
+    parser.add_argument("--vector-db", default="cache/snomed_vector_db.jsonl")
     parser.add_argument("--faiss-index", default="")
     parser.add_argument("--faiss-meta", default="")
     parser.add_argument("--vector-top-k", type=int, default=8)
     parser.add_argument("--vector-min-score", type=float, default=0.45)
-    parser.add_argument("--snowstorm-context", action="store_true", default=True)
-    parser.add_argument("--no-snowstorm-context", action="store_true")
-    parser.add_argument("--log-file", default="agentic_linker/run.log")
+    parser.add_argument("--log-file", default="output/run.log")
     args = parser.parse_args()
-    if args.no_snowstorm_context:
-        args.snowstorm_context = False
 
     if not os.environ.get("OPENAI_API_KEY"):
         print("OPENAI_API_KEY is not set.", file=sys.stderr)
         return 2
 
-    os.makedirs(os.path.dirname(args.log_file), exist_ok=True)
+    if bool(args.faiss_index) != bool(args.faiss_meta):
+        print("Provide both --faiss-index and --faiss-meta, or neither.", file=sys.stderr)
+        return 2
+    if args.faiss_index and (not os.path.exists(args.faiss_index) or not os.path.exists(args.faiss_meta)):
+        print("FAISS index or metadata file not found.", file=sys.stderr)
+        return 2
+    if not args.faiss_index and not os.path.exists(args.vector_db):
+        print(f"Vector DB not found: {args.vector_db}", file=sys.stderr)
+        return 2
+
+    ensure_parent_dir(args.log_file)
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s | %(levelname)s | %(message)s",
@@ -452,34 +354,26 @@ def main() -> int:
             logging.StreamHandler(sys.stdout),
         ],
     )
-    logging.info("Starting run")
-    logging.info("Input=%s Output=%s Model=%s BaseURL=%s", args.input, args.output, args.model, args.base_url)
-    if args.vector_db and not os.path.exists(args.vector_db):
-        logging.warning("Vector DB not found at %s (vector fallback disabled).", args.vector_db)
-    if (args.faiss_index and not os.path.exists(args.faiss_index)) or (args.faiss_meta and not os.path.exists(args.faiss_meta)):
-        logging.warning("FAISS index/meta not found (FAISS disabled).")
+    logging.info("Starting vector-only SNOMED linking")
+    logging.info("Input=%s Output=%s Model=%s", args.input, args.output, args.model)
 
     client = OpenAI()
     docs = read_json(args.input)
-    snowstorm_cache: Dict[str, Dict[str, Any]] = {}
     faiss_index = None
     faiss_meta: List[Dict[str, Any]] = []
-    if args.faiss_index and args.faiss_meta and faiss is not None and np is not None:
-        try:
-            faiss_index = faiss.read_index(args.faiss_index)
-            faiss_meta = load_faiss_meta(args.faiss_meta)
-            logging.info("Loaded FAISS index=%s meta=%s", args.faiss_index, args.faiss_meta)
-        except Exception as exc:
-            logging.warning("Failed to load FAISS index/meta: %s", exc)
+    if args.faiss_index:
+        faiss_index = faiss.read_index(args.faiss_index)
+        faiss_meta = load_faiss_meta(args.faiss_meta)
+        logging.info("Loaded FAISS index=%s meta=%s", args.faiss_index, args.faiss_meta)
 
     output = []
     for doc in docs:
         content = doc.get("content", "")
         logging.info("Doc id=%s title=%s date=%s", doc.get("id"), doc.get("title"), doc.get("date"))
-        logging.info("Extracting spans (max=%s)...", args.max_spans)
         spans = extract_spans(client, args.model, content, args.max_spans)
         logging.info("Extracted spans=%s", len(spans))
         linked_spans = []
+
         for span in spans:
             span_text = span.get("text", "").strip()
             if not span_text:
@@ -487,113 +381,40 @@ def main() -> int:
             idx = find_span(content, span_text)
             if idx["start"] == -1:
                 continue
+
             english_term = span.get("english_term", "").strip() or span_text
-            search_attempts = []
-            terms_to_try = [english_term]
-            selection = {"status": "none", "snomed_id": "", "term": "", "confidence": 0}
-            while len(terms_to_try) < max(1, args.max_search_tries):
-                new_terms = suggest_search_terms(
-                    client,
-                    args.model,
-                    context=content,
-                    span_text=span_text,
-                    english_term=terms_to_try[-1],
-                    max_terms=args.max_search_tries - len(terms_to_try),
-                )
-                if not new_terms:
-                    break
-                terms_to_try.extend(new_terms)
-            logging.info("Span='%s' terms_to_try=%s", span_text, terms_to_try[: max(1, args.max_search_tries)])
-            vector_candidates: List[Dict[str, Any]] = []
-            if faiss_index is not None and faiss_meta:
-                vector_candidates = faiss_vector_search(
-                    faiss_index,
-                    faiss_meta,
-                    client,
-                    args.embedding_model,
-                    english_term,
-                    args.vector_top_k,
-                )
-            elif args.vector_db and os.path.exists(args.vector_db):
-                vector_candidates = vector_search(
-                    args.vector_db,
-                    client,
-                    args.embedding_model,
-                    english_term,
-                    args.vector_top_k,
-                )
-            if vector_candidates:
-                vector_candidates = [
-                    c for c in vector_candidates if c.get("vector_score", 0) >= args.vector_min_score
-                ]
-            if vector_candidates:
-                if args.snowstorm_context:
-                    for c in vector_candidates:
-                        cid = c.get("concept_id")
-                        if not cid:
-                            continue
-                        if cid not in snowstorm_cache:
-                            snowstorm_cache[cid] = enrich_candidate_with_snowstorm(args.base_url, cid)
-                        c.update(snowstorm_cache[cid])
-                selection = choose_best_concept(
+            search_terms = [english_term]
+            search_terms.extend(
+                suggest_search_terms(
                     client,
                     args.model,
                     context=content,
                     span_text=span_text,
                     english_term=english_term,
-                    candidates=vector_candidates,
+                    max_terms=max(0, args.max_search_tries - 1),
                 )
-                search_attempts.append(
-                    {
-                        "term": english_term,
-                        "candidates": len(vector_candidates),
-                        "status": selection.get("status"),
-                        "confidence": selection.get("confidence"),
-                        "source": "vector_primary",
-                    }
-                )
-            if selection.get("status") != "linked" or selection.get("confidence", 0) < args.min_confidence:
-                for term in terms_to_try[: max(1, args.max_search_tries)]:
-                    candidates = snowstorm_search(args.base_url, term, args.candidate_limit, args.language)
-                    if not candidates:
-                        search_attempts.append({"term": term, "candidates": 0, "status": "no_results"})
-                        logging.info("Search term '%s' -> 0 candidates", term)
-                        continue
-                    if args.snowstorm_context:
-                        for c in candidates:
-                            cid = c.get("concept_id")
-                            if not cid:
-                                continue
-                            if cid not in snowstorm_cache:
-                                snowstorm_cache[cid] = enrich_candidate_with_snowstorm(args.base_url, cid)
-                            c.update(snowstorm_cache[cid])
-                    selection = choose_best_concept(
-                        client,
-                        args.model,
-                        context=content,
-                        span_text=span_text,
-                        english_term=term,
-                        candidates=candidates,
-                    )
-                    search_attempts.append(
-                        {
-                            "term": term,
-                            "candidates": len(candidates),
-                            "status": selection.get("status"),
-                            "confidence": selection.get("confidence"),
-                            "source": "snowstorm_secondary",
-                        }
-                    )
-                    logging.info(
-                        "Search term '%s' -> candidates=%s status=%s conf=%s snomed_id=%s",
-                        term,
-                        len(candidates),
-                        selection.get("status"),
-                        selection.get("confidence"),
-                        selection.get("snomed_id"),
-                    )
-                    if selection.get("status") == "linked" and selection.get("confidence", 0) >= args.min_confidence:
-                        break
+            )
+            candidates, search_attempts = collect_candidates(
+                search_terms=search_terms[: max(1, args.max_search_tries)],
+                client=client,
+                embedding_model=args.embedding_model,
+                vector_db=args.vector_db,
+                faiss_index=faiss_index,
+                faiss_meta=faiss_meta,
+                top_k=args.vector_top_k,
+                min_score=args.vector_min_score,
+            )
+            selection = choose_best_concept(
+                client,
+                args.model,
+                context=content,
+                span_text=span_text,
+                english_term=english_term,
+                candidates=candidates,
+            )
+            if selection.get("confidence", 0) < args.min_confidence:
+                selection = {"status": "none", "snomed_id": "", "term": "", "confidence": selection.get("confidence", 0)}
+
             linked_spans.append(
                 {
                     "text": span_text,
@@ -620,7 +441,6 @@ def main() -> int:
 
     write_json(args.output, output)
     logging.info("Wrote %s", args.output)
-    logging.info("Done")
     return 0
 
 
