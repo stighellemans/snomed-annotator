@@ -1,0 +1,33 @@
+x-service: &service
+  build: .
+  image: snomed-annotator:local
+  init: true
+  env_file: backend/.env
+  environment:
+    EMBEDDER_DEVICE: cpu
+  volumes:
+    - annotation-data:/app/backend/data
+    - model-cache:/home/app/.cache/huggingface
+    - ./snomed:/app/snomed:ro
+
+services:
+  app:
+    <<: *service
+    ports:
+      - "127.0.0.1:5180:8000"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health', timeout=5)"]
+      interval: 30s
+      timeout: 10s
+      start_period: 120s
+      retries: 3
+
+  index:
+    <<: *service
+    profiles: [tools]
+    command: ["python", "-m", "indexing.build", "--embedders", "biolord"]
+
+volumes:
+  annotation-data:
+  model-cache:

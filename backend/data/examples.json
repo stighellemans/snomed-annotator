@@ -1,0 +1,23 @@
+[
+  {
+    "row": 1,
+    "id": "demo-1",
+    "nr": "1",
+    "description": "Patiënt met hypertensie en diabetes mellitus type 2. Sinds drie dagen lumbalgie. Geen koorts.",
+    "icd": ""
+  },
+  {
+    "row": 2,
+    "id": "demo-2",
+    "nr": "1",
+    "description": "Astma in de voorgeschiedenis. Vandaag hoesten en kortademigheid. Geen pijn op de borst.",
+    "icd": ""
+  },
+  {
+    "row": 3,
+    "id": "demo-3",
+    "nr": "1",
+    "description": "Chronische pijn in de rechterknie. Een radiografie van de knie wordt gepland.",
+    "icd": ""
+  }
+]

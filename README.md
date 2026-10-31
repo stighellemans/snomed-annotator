@@ -1,133 +1,52 @@
-# SNOMED Annotator Prototype
+# SNOMED CT Annotator
 
-Vector-only prototype for linking clinical spans in `data/example_documents.json` to SNOMED CT concepts.
+**Van klinische tekst naar aanklikbare SNOMED CT-codes.** Dit ZAS-prototype helpt
+zorgverleners en terminologieteams om vrije Nederlandstalige tekst te structureren
+en voorgestelde codes te controleren.
 
-The workflow is:
+- **Annoteren:** medische begrippen worden gemarkeerd met hun SNOMED CT-code.
+- **Controleren:** klik op een begrip, bekijk alternatieven en pas de code aan.
+- **Zoeken:** zoek rechtstreeks in SNOMED CT, ook met Nederlandse termen.
+- **Inzicht:** bekijk de verwerkingsstappen en gebruikte AI-instructies.
 
-1. Build a local SNOMED vector database from a licensed RF2 release.
-2. Optionally build a FAISS index for faster search.
-3. Run the vector-only linker.
-4. Generate summary CSVs and plots.
+### Geannoteerde tekst
 
-Snowstorm is not used by this repository.
+Fictief voorbeeld: de oorspronkelijke tekst blijft leesbaar; rechts staan de
+voorgestelde code en alternatieven.
 
-## What is tracked
+![Geannoteerde fictieve tekst met aanklikbare SNOMED CT-codes en alternatieven](docs/images/annotated-text.jpg)
 
-The GitHub repository should contain only source code, small sample inputs, and documentation.
+### Hoe werkt het?
 
-Ignored local artifacts include:
+AI herkent medische begrippen, een zoekindex vindt passende SNOMED CT-concepten
+en een optionele AI-stap kiest de beste kandidaat in de context. De gebruiker
+kan die keuze controleren en aanpassen.
 
-- SNOMED CT release zips and extracted release folders.
-- The vendored/local `snowstorm/` directory.
-- Generated cache files under `cache/`, except `cache/.gitkeep`. Generated output files under `output/`, except `output/.gitkeep` and `output/example_semantic_links.json`.
-- `.DS_Store` and Python cache files.
+![Pipeline van klinische tekst tot controleerbare SNOMED CT-annotaties](docs/images/pipeline.jpg)
 
-## Repository layout
+### Binnen de zorginstelling installeren
 
-- `data/example_documents.json`: example input notes.
-- `agentic_linker/snomed_vector_db.py`: builds/searches a local SNOMED vector database from RF2.
-- `agentic_linker/semantic_link_snomed.py`: vector-only linker.
-- `analysis_snomed_linking.py`: writes simple linked-span summaries and plots.
-- `output/example_semantic_links.json`: example vector-linked output.
-- `cache/`: vector DBs and FAISS indexes.
-- `output/`: linked-span outputs, logs, and analysis outputs.
-- `.env.example`: environment variable template.
-
-## Requirements
-
-- Python 3.10 or newer.
-- An `OPENAI_API_KEY`.
-- A licensed SNOMED CT RF2 release.
-
-Use an RF2 zip or an extracted RF2 directory for best results. A raw `Description_Snapshot` text file also works, but active-concept and preferred-term filtering will be disabled because the concept and language refset files are not available.
-
-SNOMED CT release files are not downloaded by this repo and should not be committed.
-
-## Setup
+De IT-dienst kan de webapp op één interne computer of server draaien met Docker.
+Een GPU of aparte terminologieserver is niet nodig. Nodig zijn een geldige
+**SNOMED CT International RF2-release** en een **OpenAI API-sleutel** met
+internettoegang voor nieuwe annotaties.
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r agentic_linker/requirements.txt
-
-cp .env.example .env
+git clone https://github.com/stighellemans/snomed-annotator.git
+cd snomed-annotator
+cp backend/.env.example backend/.env
+# Vul OPENAI_API_KEY in en plaats de RF2-zip in snomed/.
+docker compose run --build --rm index  # eenmalig de lokale zoekindex opbouwen
+docker compose up -d --build app
 ```
 
-Edit `.env`:
+Open daarna **http://localhost:5180**. De index blijft bewaard bij herstarten.
+[Installatie, intern delen en configuratie →](docs/installation.md)
 
-```bash
-OPENAI_API_KEY=your_key_here
-SNOMED_RF2_PATH=/path/to/your/SnomedCT_RF2_release.zip
-```
+**Voor een pilot:** de webapp en BioLORD-zoekindex draaien lokaal, maar nieuwe
+annotaties sturen tekst naar OpenAI, ook wanneer de optionele AI-keuze uitstaat.
+Het prototype is niet klinisch gevalideerd. Handmatige correcties blijven alleen
+in het huidige scherm; er is nog geen EPD-koppeling of gebruikersbeheer.
 
-Load the environment:
-
-```bash
-set -a
-source .env
-set +a
-```
-
-## Build the SNOMED vector database
-
-`--snomed-path` accepts an RF2 zip, an extracted RF2 directory, or a Description Snapshot text file.
-
-```bash
-python agentic_linker/snomed_vector_db.py build \
-  --snomed-path "$SNOMED_RF2_PATH" \
-  --output cache/snomed_vector_db.jsonl
-```
-
-For faster linking, build a FAISS index:
-
-```bash
-python agentic_linker/snomed_vector_db.py index \
-  --input cache/snomed_vector_db.jsonl \
-  --index cache/snomed_vector_db.index \
-  --meta cache/snomed_vector_db.meta.jsonl
-```
-
-By default, vector resources are stored in `cache/`:
-
-- `cache/snomed_vector_db.jsonl`
-- `cache/snomed_vector_db.index`
-- `cache/snomed_vector_db.meta.jsonl`
-- `cache/snomed_vector_db.state.json` when using `--resume`
-
-There is no hidden cache. The RF2 release stays wherever `SNOMED_RF2_PATH` points; embeddings and FAISS resources are written to `cache/` unless you override the CLI options. Linker run outputs and logs are written to `output/` by default.
-
-## Link documents
-
-Recommended FAISS run:
-
-```bash
-python agentic_linker/semantic_link_snomed.py \
-  --input data/example_documents.json \
-  --output output/linked_spans_semantic.json \
-  --faiss-index cache/snomed_vector_db.index \
-  --faiss-meta cache/snomed_vector_db.meta.jsonl
-```
-
-Without FAISS:
-
-```bash
-python agentic_linker/semantic_link_snomed.py \
-  --input data/example_documents.json \
-  --output output/linked_spans_semantic.json \
-  --vector-db cache/snomed_vector_db.jsonl
-```
-
-## Analyze outputs
-
-```bash
-python analysis_snomed_linking.py
-```
-
-Generated analysis files are written to `output/analysis/`, which is ignored by Git.
-
-## Notes
-
-- The linker sends clinical text and candidate terms to OpenAI. Confirm that this is acceptable for your data before running it on sensitive notes.
-- Default linking model: `gpt-5-mini-2025-08-07`; override with `--model`.
-- Default embedding model: `text-embedding-3-small`; override with `--embedding-model`.
-- A full RF2 vector build can take time and will call the OpenAI embeddings API for many SNOMED terms.
+Deze repo bevat nu de ZAS-webapp; de eerdere versie met scripts blijft
+[beschikbaar in de Git-historiek](https://github.com/stighellemans/snomed-annotator/tree/65bc89466491a0a521526eada0b07dd109eb2a2d).

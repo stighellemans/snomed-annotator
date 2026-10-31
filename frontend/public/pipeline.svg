@@ -1,0 +1,112 @@
+<svg width="100%" viewBox="0 0 680 648" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>SNOMED CT annotation pipeline data flow</title>
+  <desc>Top-down block diagram: pasted Dutch text goes through LLM span extraction, embedding with a selectable backend (BioLORD or OpenAI), FAISS vector search, then a selectable LLM-arbitrator or top-1-vector step, producing annotated SNOMED CT codes. NER and final results are cached.</desc>
+  <style>
+    text { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .t  { font-size: 14px; fill: #17202a; }
+    .ts { font-size: 12px; fill: #66717f; }
+    .th { font-size: 14px; font-weight: 600; fill: #17202a; }
+    .box   { fill: #f7f8fa; stroke: #d8dee6; }
+    .blue  { fill: #e9eefc; stroke: #4f6bd8; }
+    .blue .th, .blue .t { fill: #21356e; }
+    .blue .ts { fill: #5566a0; }
+    .teal  { fill: #e0f1f0; stroke: #1f8a82; }
+    .teal .th, .teal .t { fill: #114b46; }
+    .teal .ts { fill: #3f7f78; }
+    .arr { stroke: #8893a2; stroke-width: 1.5; fill: none; }
+    .leader { stroke: #b6bdc8; stroke-width: 0.8; stroke-dasharray: 3 3; }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#8893a2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Input -->
+  <g>
+    <rect class="box" x="190" y="20" width="300" height="56" rx="8" stroke-width="0.5"/>
+    <text class="th" x="340" y="42" text-anchor="middle" dominant-baseline="central">Paste clinical text</text>
+    <text class="ts" x="340" y="60" text-anchor="middle" dominant-baseline="central">Dutch clinical text</text>
+  </g>
+  <line x1="340" y1="80" x2="340" y2="116" class="arr" marker-end="url(#arrow)"/>
+
+  <!-- NER -->
+  <g class="blue">
+    <rect x="190" y="120" width="300" height="56" rx="8" stroke-width="0.5"/>
+    <text class="th" x="340" y="142" text-anchor="middle" dominant-baseline="central">Span extraction · NER</text>
+    <text class="ts" x="340" y="160" text-anchor="middle" dominant-baseline="central">OpenAI · instructed to skip negations</text>
+  </g>
+  <line x1="490" y1="148" x2="512" y2="148" class="leader"/>
+  <g>
+    <rect class="box" x="512" y="126" width="120" height="44" rx="4" stroke-width="0.5" stroke-dasharray="4 3"/>
+    <text class="th" x="572" y="142" text-anchor="middle" dominant-baseline="central">NER cache</text>
+    <text class="ts" x="572" y="158" text-anchor="middle" dominant-baseline="central">reused both modes</text>
+  </g>
+  <line x1="340" y1="180" x2="340" y2="216" class="arr" marker-end="url(#arrow)"/>
+
+  <!-- Embed -->
+  <g class="teal">
+    <rect x="190" y="220" width="300" height="56" rx="8" stroke-width="0.5"/>
+    <text class="th" x="340" y="242" text-anchor="middle" dominant-baseline="central">Embed each span</text>
+    <text class="ts" x="340" y="260" text-anchor="middle" dominant-baseline="central">BioLORD or OpenAI · selectable</text>
+  </g>
+  <!-- embedder choice tag -->
+  <line x1="490" y1="248" x2="512" y2="248" class="leader"/>
+  <g>
+    <rect class="box" x="512" y="226" width="120" height="44" rx="4" stroke-width="0.5"/>
+    <text class="th" x="572" y="242" text-anchor="middle" dominant-baseline="central">embedder</text>
+    <text class="ts" x="572" y="258" text-anchor="middle" dominant-baseline="central">BioLORD / OpenAI</text>
+  </g>
+  <line x1="340" y1="280" x2="340" y2="316" class="arr" marker-end="url(#arrow)"/>
+
+  <!-- Retrieve -->
+  <g class="teal">
+    <rect x="190" y="320" width="300" height="56" rx="8" stroke-width="0.5"/>
+    <text class="th" x="340" y="342" text-anchor="middle" dominant-baseline="central">Vector search</text>
+    <text class="ts" x="340" y="360" text-anchor="middle" dominant-baseline="central">FAISS · top-10 candidates</text>
+  </g>
+  <line x1="340" y1="380" x2="340" y2="420" class="arr"/>
+
+  <!-- Selection container -->
+  <rect class="box" x="50" y="398" width="580" height="100" rx="8" stroke-width="0.5" stroke-dasharray="5 4" style="fill:none"/>
+  <text class="ts" x="64" y="410" text-anchor="start" dominant-baseline="central">Selection · pick one mode (toggle)</text>
+
+  <path class="arr" marker-end="url(#arrow)" d="M340 420 L210 420 L210 430"/>
+  <path class="arr" marker-end="url(#arrow)" d="M340 420 L470 420 L470 430"/>
+
+  <!-- 4a LLM arbitrator -->
+  <g class="blue">
+    <rect x="90" y="430" width="240" height="56" rx="8" stroke-width="0.5"/>
+    <text class="th" x="210" y="452" text-anchor="middle" dominant-baseline="central">LLM arbitrator</text>
+    <text class="ts" x="210" y="470" text-anchor="middle" dominant-baseline="central">best of 10 · can reject</text>
+  </g>
+
+  <!-- 4b top-1 -->
+  <g class="teal">
+    <rect x="350" y="430" width="240" height="56" rx="8" stroke-width="0.5"/>
+    <text class="th" x="470" y="452" text-anchor="middle" dominant-baseline="central">Top-1 vector</text>
+    <text class="ts" x="470" y="470" text-anchor="middle" dominant-baseline="central">selection only · extraction still uses AI</text>
+  </g>
+
+  <path class="arr" d="M210 486 L210 518 L340 518"/>
+  <path class="arr" marker-end="url(#arrow)" d="M470 486 L470 518 L340 518 L340 544"/>
+
+  <!-- Result -->
+  <g>
+    <rect class="box" x="190" y="548" width="300" height="56" rx="8" stroke-width="0.5"/>
+    <text class="th" x="340" y="570" text-anchor="middle" dominant-baseline="central">Annotated SNOMED CT</text>
+    <text class="ts" x="340" y="588" text-anchor="middle" dominant-baseline="central">FSN + concept_id, highlighted</text>
+  </g>
+  <line x1="490" y1="576" x2="512" y2="576" class="leader"/>
+  <g>
+    <rect class="box" x="512" y="554" width="120" height="44" rx="4" stroke-width="0.5" stroke-dasharray="4 3"/>
+    <text class="th" x="572" y="570" text-anchor="middle" dominant-baseline="central">Result cache</text>
+    <text class="ts" x="572" y="586" text-anchor="middle" dominant-baseline="central">instant on repeat</text>
+  </g>
+
+  <!-- Legend -->
+  <rect class="blue" x="190" y="620" width="13" height="13" rx="3" stroke-width="0.5"/>
+  <text class="ts" x="210" y="627" text-anchor="start" dominant-baseline="central">LLM step (OpenAI API)</text>
+  <rect class="teal" x="372" y="620" width="13" height="13" rx="3" stroke-width="0.5"/>
+  <text class="ts" x="392" y="627" text-anchor="start" dominant-baseline="central">Vector step (BioLORD/OpenAI + FAISS)</text>
+</svg>
