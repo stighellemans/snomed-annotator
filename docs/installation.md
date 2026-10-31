@@ -97,7 +97,7 @@ python3 scripts/start_demo.py
 ```
 
 De launcher opent <http://127.0.0.1:5180> en start de app op de achtergrond.
-Op macOS kun je na de installatie ook dubbelklikken op `Start ZAS demo.command`.
+Op macOS kun je na de installatie ook dubbelklikken op `Start SNOMED demo.command`.
 De log staat in `.runtime/demo.log` en de PID in `.runtime/demo.pid`.
 Op Windows kun je na installatie vanuit `backend` rechtstreeks starten met
 `.venv\Scripts\python -m uvicorn app.main:app --host 127.0.0.1 --port 5180`.
@@ -140,16 +140,12 @@ resultaten wilt, want niet alle instellingen zitten in de cachesleutel.
 ## Overgang van het oudere prototype
 
 De GitHub-versie vóór deze update was een CLI voor vectorgebaseerde koppeling en
-analysebestanden. De ZAS-versie voegt een React-interface, FastAPI-service,
+analysebestanden. De huidige versie voegt een React-interface, FastAPI-service,
 BioLORD, aanklikbare annotaties, handmatige codekeuze en een pipelineweergave toe.
 De zelfstandig werkende RF2-importer en indexbouwers zijn mee overgenomen.
 De oude CLI en broncode blijven in commit
 [`65bc894`](https://github.com/stighellemans/snomed-annotator/tree/65bc89466491a0a521526eada0b07dd109eb2a2d).
 Oude CLI-commando's en vectorbestanden zijn geen onderdeel van de nieuwe installatie.
-
-De oorspronkelijke ZAS-demo op deze Mac gebruikte externe indexpaden en een
-gedeelde Python-omgeving. Deze publieke versie gebruikt eigen indexpaden en een
-eigen installatie; die lokale demo blijft afzonderlijk bestaan.
 
 De broncode valt onder de [MIT-licentie](../LICENSE). De SNOMED CT-release en
 modelbestanden vallen onder hun eigen licenties en worden niet gepubliceerd.

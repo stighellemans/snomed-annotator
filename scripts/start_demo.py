@@ -1,4 +1,4 @@
-"""Start the built ZAS demo in the background; safe to run more than once."""
+"""Start the built SNOMED demo in the background; safe to run more than once."""
 from __future__ import annotations
 
 import argparse
@@ -20,7 +20,7 @@ def ready() -> bool:
     try:
         with urllib.request.urlopen(URL + "/api/health", timeout=2) as response:
             data = json.load(response)
-        return data.get("app") == "snomed-annotation-zas" and data.get("status") == "ok"
+        return data.get("app") == "snomed-annotator" and data.get("status") == "ok"
     except (OSError, ValueError, urllib.error.URLError):
         return False
 
@@ -50,7 +50,7 @@ def main() -> None:
                 stdout=log, stderr=subprocess.STDOUT, start_new_session=True,
             )
         (runtime / "demo.pid").write_text(str(process.pid))
-        print("ZAS-demo wordt gestart; de zoekindex wordt geladen…", flush=True)
+        print("SNOMED-demo wordt gestart; de zoekindex wordt geladen…", flush=True)
         for _ in range(120):
             if ready():
                 break
@@ -59,7 +59,7 @@ def main() -> None:
             time.sleep(1)
         else:
             raise SystemExit(f"Server is nog niet klaar. Zie {log_path}")
-    print(f"ZAS-demo klaar: {URL}", flush=True)
+    print(f"SNOMED-demo klaar: {URL}", flush=True)
     if not args.no_browser:
         webbrowser.open(URL)
 

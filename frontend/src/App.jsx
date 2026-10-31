@@ -53,7 +53,7 @@ export default function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>ZAS · SNOMED CT Annotator</h1>
+        <h1>SNOMED CT Annotator</h1>
         <span className="muted small">Multilingual vector search + LLM selection</span>
         <nav className="tabs">
           <button className={view === 'annotate' ? 'tab active' : 'tab'} onClick={() => setView('annotate')}>

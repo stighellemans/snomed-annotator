@@ -1,6 +1,6 @@
 # SNOMED CT Annotator
 
-**Van klinische tekst naar aanklikbare SNOMED CT-codes.** Dit ZAS-prototype helpt
+**Van klinische tekst naar aanklikbare SNOMED CT-codes.** Dit prototype helpt
 zorgverleners en terminologieteams om vrije Nederlandstalige tekst te structureren
 en voorgestelde codes te controleren.
 
@@ -47,6 +47,3 @@ Open daarna **http://localhost:5180**. De index blijft bewaard bij herstarten.
 annotaties sturen tekst naar OpenAI, ook wanneer de optionele AI-keuze uitstaat.
 Het prototype is niet klinisch gevalideerd. Handmatige correcties blijven alleen
 in het huidige scherm; er is nog geen EPD-koppeling of gebruikersbeheer.
-
-Deze repo bevat nu de ZAS-webapp; de eerdere versie met scripts blijft
-[beschikbaar in de Git-historiek](https://github.com/stighellemans/snomed-annotator/tree/65bc89466491a0a521526eada0b07dd109eb2a2d).

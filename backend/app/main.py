@@ -23,7 +23,7 @@ _EMBEDDERS = [
     {"id": "openai", "label": "OpenAI text-embedding-3-small"},
 ]
 
-app = FastAPI(title="ZAS SNOMED Annotator")
+app = FastAPI(title="SNOMED CT Annotator")
 
 app.add_middleware(
     CORSMiddleware,
@@ -56,7 +56,7 @@ class AnnotateRequest(BaseModel):
 def health():
     return {
         "status": "ok",
-        "app": "snomed-annotation-zas",
+        "app": "snomed-annotator",
         "llm_model": settings.llm_model,
         "embedder_model": settings.embedder_model,
         "index_dir": settings.index_dir,
