@@ -5,6 +5,8 @@ x-service: &service
   env_file: backend/.env
   environment:
     EMBEDDER_DEVICE: cpu
+  extra_hosts:
+    - "host.docker.internal:host-gateway"
   volumes:
     - annotation-data:/app/backend/data
     - model-cache:/home/app/.cache/huggingface
@@ -14,7 +16,7 @@ services:
   app:
     <<: *service
     ports:
-      - "127.0.0.1:5180:8000"
+      - "127.0.0.1:${APP_PORT:-5180}:8000"
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health', timeout=5)"]

@@ -67,12 +67,12 @@ class OpenAIEmbedder:
         self.model = model
 
     def encode(self, texts: Sequence[str]) -> np.ndarray:
-        from .llm import get_client
+        from .llm import get_embedding_client
 
         items = [str(t) for t in texts]
         if not items:
             return np.zeros((0, 1536), dtype="float32")
-        resp = get_client().embeddings.create(model=self.model, input=items)
+        resp = get_embedding_client().embeddings.create(model=self.model, input=items)
         vecs = np.asarray([d.embedding for d in resp.data], dtype="float32")
         norms = np.linalg.norm(vecs, axis=1, keepdims=True)
         norms[norms == 0] = 1.0

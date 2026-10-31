@@ -13,16 +13,43 @@ Voer vanuit de hoofdmap uit:
 cp backend/.env.example backend/.env
 ```
 
-Vul `OPENAI_API_KEY` in `backend/.env` in. Plaats precies één RF2-release-zip in
-`snomed/` en bouw de index:
+Vul de LLM-instellingen in `backend/.env` in. OpenAI is de standaard, maar je
+kunt ook een [andere provider of eigen endpoint](llm-providers.md) gebruiken.
+Plaats precies één RF2-release-zip in `snomed/` en start de installatie:
+
+```bash
+python3 scripts/setup.py
+```
+
+Dit hostscript gebruikt alleen de Python-standaardbibliotheek: Node.js en de
+Python-afhankelijkheden van de app worden in Docker geïnstalleerd. Het script
+controleert Docker, Compose, het configuratiebestand, de RF2-zip en de poort.
+Daarna bouwt het de container, controleert de providerconfiguratie en stuurt één
+synthetische JSON-test naar de gekozen LLM-API. Bij fouten stopt de installatie
+met een melding. Een ontbrekende BioLORD-index wordt opgebouwd; een bestaande
+index wordt hergebruikt. Ten slotte wordt de app gestart en de lokale readiness
+gecontroleerd.
+
+```bash
+python3 scripts/setup.py --check          # alleen vereisten; niets bouwen/starten
+python3 scripts/setup.py --rebuild-index  # index herbouwen bij een RF2-update
+```
+
+De automatische indexopbouw gebruikt BioLORD. De optionele OpenAI-index bouw je
+apart met het commando hieronder. Voor alleen het voorbereiden van de installatie
+zonder LLM-aanroep kun je `--skip-llm-check` gebruiken. Bij een bezette poort:
+`APP_PORT=5181 python3 scripts/setup.py`. Gebruik diezelfde `APP_PORT` ook bij
+latere handmatige Compose-commando's.
+
+De afzonderlijke Docker-commando's blijven beschikbaar:
 
 ```bash
 docker compose run --build --rm index
 docker compose up -d --build app
 ```
 
-De standaardinstallatie gebruikt **BioLORD** voor lokale zoekopdrachten en
-**OpenAI** voor herkenning van begrippen en de optionele codekeuze. Het bouwen
+De standaardinstallatie gebruikt **BioLORD** voor lokale zoekopdrachten en de
+**ingestelde LLM-API** voor herkenning van begrippen en de optionele codekeuze. Het bouwen
 van deze BioLORD-index gebruikt geen betaalde OpenAI-embeddings. De eerste build
 downloadt het model en verwerkt de volledige release; dat kan lang duren en
 vraagt meer geheugen dan een gewone zoekopdracht. Een GPU is niet nodig.
@@ -52,7 +79,7 @@ gebruikelijke aanmelding. De app zelf heeft geen authenticatie, rollen of
 auditlog. Gebruik één applicatieproces, want de eenvoudige JSON-caches zijn niet
 geschikt voor meerdere processen die dezelfde bestanden schrijven.
 
-Nieuwe annotaties sturen de volledige tekst naar OpenAI voor extractie. Bij
+Nieuwe annotaties sturen de volledige tekst naar de ingestelde LLM-API voor extractie. Bij
 ingeschakelde **LLM arbitrator** worden tekst en kandidaten ook gebruikt voor de
 codekeuze. **Top-1 vector** slaat alleen die tweede AI-stap over. Rechtstreeks
 zoeken met BioLORD werkt lokaal nadat het model is gedownload. De optionele
@@ -86,7 +113,7 @@ Gebruik Python 3.12 en Node.js 22 of nieuwer. Vanuit de hoofdmap:
 python3.12 -m venv backend/.venv
 backend/.venv/bin/python -m pip install -r backend/requirements.txt
 cp backend/.env.example backend/.env
-# Vul de sleutel in en plaats de RF2-zip in snomed/.
+# Vul de LLM-instellingen in en plaats de RF2-zip in snomed/.
 cd backend
 .venv/bin/python -m indexing.build --embedders biolord
 cd ../frontend
@@ -114,9 +141,16 @@ niet nodig.
 
 | Variabele | Standaard / gebruik |
 | --- | --- |
-| `OPENAI_API_KEY` | Vereist voor nieuwe annotaties en OpenAI-zoeken |
-| `LLM_MODEL` | `gpt-5.4-mini`; kies een model met Responses en structured outputs |
-| `LLM_REASONING_EFFORT` | `low`; leeg laten als het gekozen model dit niet ondersteunt |
+| `LLM_PROVIDER` | `openai`, `openai_compatible` of `anthropic` |
+| `LLM_API_KEY` | Sleutel voor de gekozen LLM-API |
+| `LLM_BASE_URL` | Providerstandaard; verplicht voor een compatibel endpoint |
+| `LLM_API` | Automatisch; eventueel `responses`, `chat_completions` of `messages` |
+| `LLM_MODEL` | `gpt-5.4-mini` bij OpenAI; vul voor andere providers de eigen modelnaam in |
+| `LLM_JSON_MODE` | `json_schema`; compatibele endpoints kunnen ook `json_object` of `prompt` gebruiken |
+| `LLM_REASONING_EFFORT` | `low` bij OpenAI; leeg laten als het model dit niet ondersteunt |
+| `LLM_MAX_TOKENS` | `4096` als bovengrens voor het antwoord |
+| `LLM_TIMEOUT_SECONDS` | `120` per aanvraag; verhoog voor een trager lokaal model |
+| `OPENAI_API_KEY` | Fallback voor de OpenAI-LLM en vereist voor optionele OpenAI-embeddings |
 | `EMBEDDER_MODEL` | `FremyCompany/BioLORD-2023-M` |
 | `EMBEDDER_DEVICE` | `cpu`; lokaal ook `cuda` of `mps` |
 | `DEFAULT_EMBEDDER` | `biolord` |
@@ -134,8 +168,29 @@ een model- of releasewijziging de index opnieuw op en wis de lokale
 resultaatcaches; die herkennen een gewijzigde terminologierelease niet vanzelf.
 Voor een nieuwe RF2-release: vervang de zip en gebruik
 `python -m indexing.build --embedders biolord --force-prepare` via de indexservice.
-Bij een andere LLM-instelling: herstart de app en wis de caches als je nieuwe
-resultaten wilt, want niet alle instellingen zitten in de cachesleutel.
+Provider, endpoint, API-formaat, model en uitvoerinstellingen zitten in de
+extractie- en resultaatcachesleutel. Bij gewijzigde Docker-instellingen moet je
+de container opnieuw maken: `docker compose up -d --force-recreate app`.
+Een gewone `restart` leest het gewijzigde env-bestand niet opnieuw in.
+
+## Hoe plug-and-play is dit?
+
+Voor een IT-medewerker met Docker, een RF2-release en LLM-toegang is het een
+kleine pilotinstallatie met één begeleidend commando. Voor een zorgverlener
+zonder technische ondersteuning is het nog geen kant-en-klaar installatiepakket.
+De SNOMED-release moet je zelf aanleveren en de eerste indexopbouw kan tijd en
+geheugen vragen. Een eigen lokaal taalmodel moet afzonderlijk worden ingericht.
+
+De belangrijkste volgende verbeteringen zijn:
+
+1. Een demonstratiemodus met uitsluitend fictieve, vooraf berekende voorbeelden,
+   zodat je de interface direct kunt bekijken zonder indexopbouw of API-sleutel.
+2. Correcties opslaan en resultaten exporteren, zodat een klinische review kan
+   worden hervat en hergebruikt.
+3. Een beheerde interne uitrol met bestaande aanmelding, rollen, auditlog en
+   afspraken over opslag en bewaartermijnen.
+4. Versiebeheer voor SNOMED-releases en evaluatie per taalmodel, met een
+   herhaalbare medische testset voor negaties, afkortingen en codekeuze.
 
 ## Overgang van het oudere prototype
 
@@ -155,3 +210,9 @@ lokale BioLORD-zoekopdrachten en beide annotatiemodi met fictieve tekst. De
 screenshots gebruiken de bestaande volledige BioLORD-index. Een nieuwe volledige
 RF2-indexopbouw en koppeling met de infrastructuur van een zorginstelling zijn
 niet opnieuw uitgevoerd.
+
+De API-adapters hebben lokale HTTP-contracttests voor Responses, Chat
+Completions en Anthropic Messages, inclusief sleutelisolatie en ongeldige
+antwoorden. OpenAI Responses en Chat Completions zijn ook live getest. Anthropic
+en een lokaal taalmodel zijn hier niet live getest; controleer het gekozen
+model met de synthetische API-test en een eigen medische evaluatieset.

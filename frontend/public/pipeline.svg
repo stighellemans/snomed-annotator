@@ -34,7 +34,7 @@
   <g class="blue">
     <rect x="190" y="120" width="300" height="56" rx="8" stroke-width="0.5"/>
     <text class="th" x="340" y="142" text-anchor="middle" dominant-baseline="central">Span extraction · NER</text>
-    <text class="ts" x="340" y="160" text-anchor="middle" dominant-baseline="central">OpenAI · instructed to skip negations</text>
+    <text class="ts" x="340" y="160" text-anchor="middle" dominant-baseline="central">Configured LLM · skip negated findings</text>
   </g>
   <line x1="490" y1="148" x2="512" y2="148" class="leader"/>
   <g>
@@ -106,7 +106,7 @@
 
   <!-- Legend -->
   <rect class="blue" x="190" y="620" width="13" height="13" rx="3" stroke-width="0.5"/>
-  <text class="ts" x="210" y="627" text-anchor="start" dominant-baseline="central">LLM step (OpenAI API)</text>
+  <text class="ts" x="210" y="627" text-anchor="start" dominant-baseline="central">LLM step (chosen API)</text>
   <rect class="teal" x="372" y="620" width="13" height="13" rx="3" stroke-width="0.5"/>
   <text class="ts" x="392" y="627" text-anchor="start" dominant-baseline="central">Vector step (BioLORD/OpenAI + FAISS)</text>
 </svg>

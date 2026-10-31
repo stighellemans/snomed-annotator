@@ -12,7 +12,7 @@ from typing import Any, Dict, List
 
 from .cache import JsonCache, make_key
 from .config import settings
-from .llm import call_structured
+from .llm import cache_identity, call_structured
 from .vector_store import get_store
 
 CATEGORIES = "[disorder, finding, procedure, organism, body_structure, substance, drug, symptom, test]"
@@ -148,7 +148,7 @@ def describe_prompts() -> List[Dict[str, Any]]:
 
 def extract_spans(text: str, max_spans: int) -> List[Dict[str, Any]]:
     # NER is identical regardless of arbitrator mode, so cache + reuse it.
-    key = make_key("ner", EXTRACTION_PROMPT_VERSION, max_spans, text)
+    key = make_key("ner", EXTRACTION_PROMPT_VERSION, cache_identity(), max_spans, text)
     cached = _ner_cache.get(key)
     if cached is not None:
         return cached
@@ -213,7 +213,8 @@ def _result_key(text: str, use_llm_selection: bool, embedder: str) -> str:
         EXTRACTION_PROMPT_VERSION,
         use_llm_selection,
         embedder,
-        settings.llm_model,
+        cache_identity(),
+        settings.max_spans,
         settings.top_k,
         settings.min_confidence,
         text,
@@ -285,7 +286,8 @@ def annotate(text: str, use_llm_selection: bool = True, embedder: str = None) ->
         confidence = float(selection.get("confidence") or 0.0)
         status = selection.get("status", "none")
         chosen_id = str(selection.get("concept_id") or "")
-        if status != "linked" or confidence < settings.min_confidence:
+        candidate_ids = {str(candidate["concept_id"]) for candidate in item["candidates"]}
+        if status != "linked" or confidence < settings.min_confidence or chosen_id not in candidate_ids:
             chosen_id = ""
             status = "none"
         results.append(

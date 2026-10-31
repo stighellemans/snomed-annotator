@@ -8,7 +8,9 @@ import PromptsView from './components/PromptsView.jsx';
 import EmbedderSelect from './components/EmbedderSelect.jsx';
 
 // Authored fictional example; no patient data is shipped with the prototype.
-const SAMPLE = `Patiënt met hypertensie en diabetes mellitus type 2. Sinds drie dagen lumbalgie. Geen koorts.`;
+const SAMPLE = `Patiënt van 67 jaar met hypertensie, diabetes mellitus type 2 en chronische nierinsufficiëntie. Gebruikt metformine en ramipril. Sinds drie dagen toenemende kortademigheid bij inspanning en dikke enkels. Bij onderzoek bilateraal pittingoedeem en crepitaties aan de longbasissen. Geen koorts en geen thoracale pijn.
+
+Er wordt een elektrocardiogram gemaakt en een echocardiografie aangevraagd. Werkdiagnose: hartfalen. Behandeling met furosemide wordt gestart. De patiënt vermeldt ook chronische lumbalgie. Een controle van de nierfunctie is gepland.`;
 
 export default function App() {
   const [text, setText] = useState(SAMPLE);
@@ -92,7 +94,7 @@ export default function App() {
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder="Paste a Dutch clinical snippet…"
-          rows={5}
+          rows={7}
         />
         <div className="actions">
           <button className="primary-btn" onClick={onAnnotate} disabled={loading || !text.trim()}>

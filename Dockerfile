@@ -15,9 +15,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends libgomp1 \
     && rm -rf /var/lib/apt/lists/* \
     && useradd --create-home --uid 10001 app
 WORKDIR /app/backend
+RUN pip install --no-cache-dir torch==2.12.0 --index-url https://download.pytorch.org/whl/cpu
 COPY backend/requirements.txt ./
-RUN pip install --no-cache-dir torch==2.12.0 --index-url https://download.pytorch.org/whl/cpu \
-    && pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 COPY --chown=app:app backend/ /app/backend/
 COPY --from=frontend --chown=app:app /build/dist/ /app/frontend/dist/
 RUN mkdir -p /app/backend/data/indexes /app/backend/data/prepared \

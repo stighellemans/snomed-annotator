@@ -18,15 +18,24 @@ _ENV_PATH = _BACKEND_ROOT / ".env"
 load_dotenv(_ENV_PATH)
 
 _INDEXES = _BACKEND_ROOT / "data" / "indexes"
+_LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "openai").strip().lower().replace("-", "_")
 
 
 @dataclass(frozen=True)
 class Settings:
     openai_api_key: str = os.environ.get("OPENAI_API_KEY", "")
-    llm_model: str = os.environ.get("LLM_MODEL", "gpt-5.4-mini")
+    llm_provider: str = _LLM_PROVIDER
+    llm_api_key: str = os.environ.get("LLM_API_KEY", "")
+    anthropic_api_key: str = os.environ.get("ANTHROPIC_API_KEY", "")
+    llm_base_url: str = os.environ.get("LLM_BASE_URL", "").strip()
+    llm_api: str = os.environ.get("LLM_API", "").strip().lower()
+    llm_json_mode: str = os.environ.get("LLM_JSON_MODE", "json_schema").strip().lower()
+    llm_model: str = os.environ.get("LLM_MODEL", "gpt-5.4-mini" if _LLM_PROVIDER == "openai" else "")
+    llm_timeout_seconds: float = float(os.environ.get("LLM_TIMEOUT_SECONDS", "120"))
+    llm_max_tokens: int = int(os.environ.get("LLM_MAX_TOKENS", "4096"))
     # Reasoning effort for the gpt-5 series: minimal | low | medium | high.
     # Selection/extraction are simple structured tasks, so "low" is plenty and much faster.
-    llm_reasoning_effort: str = os.environ.get("LLM_REASONING_EFFORT", "low")
+    llm_reasoning_effort: str = os.environ.get("LLM_REASONING_EFFORT", "low" if _LLM_PROVIDER == "openai" else "")
     # Concurrency for the per-span selection LLM calls (they are independent).
     select_workers: int = int(os.environ.get("SELECT_WORKERS", "8"))
     embedder_model: str = os.environ.get("EMBEDDER_MODEL", "FremyCompany/BioLORD-2023-M")

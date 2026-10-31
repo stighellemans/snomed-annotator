@@ -11,6 +11,7 @@ from pydantic import BaseModel, Field
 
 from .cache import JsonCache, make_key
 from .config import settings
+from .llm import api_style, configuration_errors
 from .pipeline import annotate, describe_prompts, peek_result
 from .vector_store import embedder_available, get_store
 
@@ -58,10 +59,22 @@ def health():
         "status": "ok",
         "app": "snomed-annotator",
         "llm_model": settings.llm_model,
+        "llm_provider": settings.llm_provider,
+        "llm_api": api_style(),
         "embedder_model": settings.embedder_model,
         "index_dir": settings.index_dir,
         "default_embedder": settings.default_embedder,
     }
+
+
+@app.get("/api/readiness")
+def readiness():
+    errors = configuration_errors()
+    if not embedder_available(settings.default_embedder):
+        errors.append("De zoekindex ontbreekt. Voer het installatiecommando uit om die op te bouwen.")
+    if errors:
+        raise HTTPException(status_code=503, detail=errors)
+    return {"status": "ready", "llm_provider": settings.llm_provider, "llm_model": settings.llm_model}
 
 
 @app.get("/api/embedders")
